@@ -6,10 +6,11 @@
 #    By: doabrour <doabrour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/18 11:23:24 by doabrour          #+#    #+#              #
-#    Updated: 2026/02/18 11:27:41 by doabrour         ###   ########.fr        #
+#    Updated: 2026/02/18 15:04:20 by doabrour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 def	ft_hello_garden():
 	print("Hello, Garden Community!");
+
 ft_hello_garden()
