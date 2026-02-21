@@ -1,4 +1,4 @@
-#!/usr/bin/env Python3
+#!/usr/bin/env python3
 
 class Plant:
 	def __init__(self, name: str, Height: int, Age: int) ->None:
