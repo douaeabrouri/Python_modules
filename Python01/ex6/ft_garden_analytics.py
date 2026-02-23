@@ -47,8 +47,14 @@ class GardenManager:
         def total_growth(self) -> int:
             total = 0
             for plant in self.plants:
-                total += 1
+                total += plant.height
             return total
+        
+        def total_of_growth(self) -> int:
+            total = 0
+            for plant in self.plants:
+                total += 1
+            return total   
         
         def count_types(self) -> tuple:
             regular = 0
@@ -85,7 +91,7 @@ class GardenManager:
         for plant in self.plants:
             print(f"- {plant.get_info()}")
         print(f"\nPlants added: {stats.total_plants()},", end="")
-        print(f" Total growth: {stats.total_growth()}cm")
+        print(f" Total growth: {stats.total_of_growth()}cm")
         print(f"Plant types: {regular} regular,", end="")
         print(f" {flowering} flowering, {prize} prize flowers")
     
@@ -119,8 +125,9 @@ if __name__ == "__main__":
     print("")
     alice.grow_all()
     alice.get_report()
-
     print(f"\nHeight validation test: {GardenManager.validate_height(10)}")
+    bob.add_plant(Plant("Cactus", 50))
+    bob.add_plant(Plant("Fern", 42))
     alice_score = alice.get_score()
     bob_score = bob.get_score()
     print(f"Garden scores - Alice: {alice_score}, Bob: {bob_score}")
