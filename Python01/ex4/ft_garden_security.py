@@ -1,5 +1,4 @@
-#!usr/bin/evn python3
-
+#!/usr/bin/env python3
 
 class SecurePlant:
     def __init__(self, name: str) -> None:
@@ -9,7 +8,7 @@ class SecurePlant:
 
     def set_height(self, value: int) -> None:
         if value < 0:
-            print(f"nvalid operation attempted: height {value} [REJECTED]")
+            print(f"Invalid operation attempted: height {value} [REJECTED]")
             print("Security: Negative height rejected")
         else:
             self.height = value
@@ -17,7 +16,7 @@ class SecurePlant:
 
     def set_age(self, value: int) -> None:
         if value < 0:
-            print(f"nvalid operation attempted: age {value} [REJECTED]")
+            print(f"Invalid operation attempted: age {value} [REJECTED]")
             print("Security: Negative age rejected")
         else:
             self.age = value
@@ -36,7 +35,7 @@ if __name__ == "__main__":
     print(f"Plant created: {Plant.name}")
     Plant.set_height(25)
     Plant.set_age(30)
-
+    print("")
     Plant.set_height(-5)
-
+    print("")
     print(f"Current plant: {Plant.name} ({Plant.height}cm, {Plant.age} days)")

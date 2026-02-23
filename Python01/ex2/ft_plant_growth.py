@@ -21,8 +21,11 @@ if __name__ == "__main__":
     rose = Plant("Rose", 25, 30)
 print("=== Day 1 ===")
 rose.get_info()
-for day in range(7):
+count = 0
+for day in range(6):
+    count += 1
     rose.grow()
     rose.age_()
 print("=== day 7 ===")
 rose.get_info()
+print(f"Growth this week: +{count}cm")

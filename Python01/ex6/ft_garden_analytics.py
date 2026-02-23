@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 class Plant:
     def __init__(self, name: str, height: int) -> None:
         self.name = name
@@ -48,9 +47,9 @@ class GardenManager:
         def total_growth(self) -> int:
             total = 0
             for plant in self.plants:
-                total += plant.height
+                total += 1
             return total
-
+        
         def count_types(self) -> tuple:
             regular = 0
             flowering = 0
@@ -89,6 +88,10 @@ class GardenManager:
         print(f" Total growth: {stats.total_growth()}cm")
         print(f"Plant types: {regular} regular,", end="")
         print(f" {flowering} flowering, {prize} prize flowers")
+    
+    def get_score(self) -> int:
+        stats = GardenManager.GardenStats(self.plants)
+        return stats.total_growth()
 
     @classmethod
     def create_garden_network(cls) -> None:
@@ -101,6 +104,7 @@ class GardenManager:
 
 if __name__ == "__main__":
     print("=== Garden Management System Demo ===")
+    print("")
     alice = GardenManager("Alice")
     bob = GardenManager("Bob")
 
@@ -117,4 +121,8 @@ if __name__ == "__main__":
     alice.get_report()
 
     print(f"\nHeight validation test: {GardenManager.validate_height(10)}")
+    alice_score = alice.get_score()
+    bob_score = bob.get_score()
+    print(f"Garden scores - Alice: {alice_score}, Bob: {bob_score}")
     GardenManager.create_garden_network()
+

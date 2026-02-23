@@ -1,4 +1,5 @@
-#!usr/bin/evn Python3
+#!/usr/bin/env python3
+
 class Plant:
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
@@ -15,7 +16,7 @@ if __name__ == "__main__":
         Plant("Fern", 15, 120),
     ]
 print("=== Plant Factory Output ===")
-for i in Plant:
+for i in Plants:
     print(f"Created: {i.name} ({i.height}cm, {i.age} days)")
-
+print("\n")
 print(f"Total plants created: {len(Plants)}")
