@@ -2,6 +2,7 @@
 
 import math
 
+
 class Plant:
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
@@ -30,7 +31,7 @@ class Tree(Plant):
         self.trunk_diameter = trunk_diameter
 
     def produce_shade(self) -> None:
-        shade = int(math.pi * (self.trunk_diameter / 2)) 
+        shade = int(math.pi * (self.trunk_diameter / 2))
         print(
             f"{self.name} provides {shade} "
             f"square meters of shade"
@@ -57,7 +58,7 @@ class Vegetable(Plant):
 if __name__ == "__main__":
     print("=== Garden Plant Types ===")
     print("")
-    flower = Flower("Rose", 25, 30, "Red")
+    flower = Flower("Rose", 25, 30, "red")
     tree = Tree("Oak", 500, 1825, 50)
     vegetable = Vegetable("Tomato", 80, 90, "summer", "C")
     print(

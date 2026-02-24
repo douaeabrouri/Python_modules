@@ -18,5 +18,5 @@ if __name__ == "__main__":
 print("=== Plant Factory Output ===")
 for i in Plants:
     print(f"Created: {i.name} ({i.height}cm, {i.age} days)")
-print("\n")
+print("")
 print(f"Total plants created: {len(Plants)}")
