@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 
+
 def water_plants(plant_list: list) -> None:
     print("Opening watering system")
     try:
         for plant in plant_list:
-            if plant is None:      
+            if plant is None:
                 raise TypeError("Cannot water None - invalid plant!")
             print(f"Watering {plant}")
     except TypeError as e:
         print(f"Error: {e}")
     finally:
         print("Closing watering system (cleanup)")
+
 
 def test_watering_system() -> None:
     print("=== Garden Watering System ===\n")
@@ -23,5 +25,3 @@ def test_watering_system() -> None:
     water_plants(plant_list)
     print()
     print("Cleanup always happens, even with errors!")
-    
-test_watering_system()
