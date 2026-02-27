@@ -4,13 +4,13 @@ def	garden_operations() -> None:
 
     print("Testing ValueError...")
     try:
-        int("abc")
+        x: int = int("abc")
     except ValueError:
            print("Caught ValueError: invalid literal for int()")
            
     print("Testing ZeroDivisionError...")
     try:
-        divisor = 0
+        divisor: int  = 0
         print(f"{10/divisor}")
     except ZeroDivisionError:
         print("Caught ZeroDivisionError: division by zero")

@@ -2,7 +2,7 @@
 
 def check_temperature(temp_str: str) -> int:
     try:
-        x2 = int(temp_str)
+        x2: int = int(temp_str)
         if x2 < 0:
            print(f"Error: {x2}°C is too cold for plants (min 0°C)")
         elif x2 > 40:

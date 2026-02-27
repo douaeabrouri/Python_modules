@@ -13,7 +13,6 @@ class WaterError(GardenError):
 	def __init__(self, message: str = "A Water error"):
 		super().__init__(message)
 
-
 def test_plant_error() -> None:
     print("Testing PlantError...")
     try:
