@@ -22,7 +22,7 @@ class WaterError(GardenError):
 class GardenManager:
     """Manages garden plants with resilient error handling."""
     def __init__(self) -> None:
-        self.plants: list[str, list[str, int]] = {}
+        self.plants: list[str, list[str, int]] = []
 
     def add_plants(self, plant_name: str) -> None:
         """Add a plant to the garden; raises PlantError if name is empty."""
