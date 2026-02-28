@@ -2,6 +2,7 @@
 
 
 def check_temperature(temp_str: str) -> int:
+    """Validate a temperature string and return it if in range (0-40)."""
     try:
         x2: int = int(temp_str)
         if x2 < 0:
@@ -16,6 +17,7 @@ def check_temperature(temp_str: str) -> int:
 
 
 def test_temperature_input() -> None:
+    """Test check_temperature with valid, invalid, and extreme inputs."""
     print("=== Garden Temperature Checker ===\n")
     print("Testing temperature: 25")
     check_temperature("25")
@@ -30,3 +32,7 @@ def test_temperature_input() -> None:
     check_temperature("-50")
     print()
     print("All tests completed - program didn't crash!")
+
+
+if __name__ == "__main__":
+    test_temperature_input()

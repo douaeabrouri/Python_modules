@@ -2,25 +2,30 @@
 
 
 class GardenError(Exception):
+    """Base exception for all garden-related problems."""
     def __init__(self, message: str = "A garden error occurred"):
         super().__init__(message)
 
 
 class PlantError(GardenError):
+    """Exception raised for problems with individual plants."""
     def __init__(self, message: str = "A plant error occurred"):
         super().__init__(message)
 
 
 class WaterError(GardenError):
+    """Exception raised for problems with the watering system."""
     def __init__(self, message: str = "A water error occurred"):
         super().__init__(message)
 
 
 class GardenManager:
+    """Manages garden plants with resilient error handling."""
     def __init__(self) -> None:
-        self.plants: list = []
+        self.plants: list[str, list[str, int]] = {}
 
     def add_plants(self, plant_name: str) -> None:
+        """Add a plant to the garden; raises PlantError if name is empty."""
         try:
             if not plant_name:
                 raise PlantError("Plant name cannot be empty!")
@@ -30,6 +35,7 @@ class GardenManager:
             print(f"Error adding plant: {e}")
 
     def water_plants(self) -> None:
+        """Water all plants with guaranteed cleanup via finally."""
         print("Opening watering system")
         try:
             for plant in self.plants:
@@ -40,6 +46,7 @@ class GardenManager:
     def check_plant_health(
         self, plant_name: str, water_level: int, sunlight_hours: int
     ) -> None:
+        """Check a plant's health; raises errors if parameters are invalid."""
         try:
             if water_level > 10:
                 raise WaterError(f"Water level {water_level}"
@@ -57,6 +64,7 @@ class GardenManager:
 
 
 def test_garden_management() -> None:
+    """Run a full integration test of the GardenManager."""
     manager = GardenManager()
     print("=== Garden Management System ===")
     print()
@@ -80,3 +88,7 @@ def test_garden_management() -> None:
         print("System recovered and continuing...\n")
 
     print("Garden management system test complete!")
+
+
+if __name__ == "__main__":
+    test_garden_management()

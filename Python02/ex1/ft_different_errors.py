@@ -2,7 +2,7 @@
 
 
 def garden_operations() -> None:
-
+    """Trigger and handle four common Python exception types."""
     print("Testing ValueError...")
     try:
         int("abc")
@@ -24,15 +24,16 @@ def garden_operations() -> None:
 
     print("\nTesting KeyError...")
     try:
-        dict = {"x": "abc", "x2": 1, "x3": 5}
+        plants = {"x": "abc", "x2": 1, "x3": 5}
         s: str = "missing_plant"
-        data = dict[s]
+        data = plants[s]
         print(f"{data}")
-    except KeyError:
-        print(f"Caught KeyError: '{s}'\n")
+    except KeyError as e:
+        print(f"Caught KeyError: {e}\n")
 
 
 def test_error_types() -> None:
+    """Run all error-type demos and show multi-error catching."""
     print("=== Garden Error Types Demo ===\n")
 
     garden_operations()
@@ -44,3 +45,7 @@ def test_error_types() -> None:
     except (ValueError, ZeroDivisionError):
         print("Caught an error, but program continues!\n")
     print("All error types tested successfully!")
+
+
+if __name__ == "__main__":
+    test_error_types()

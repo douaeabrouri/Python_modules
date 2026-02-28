@@ -2,6 +2,7 @@
 
 
 def water_plants(plant_list: list) -> None:
+    """Water each plant, always closing the system in a finally block."""
     print("Opening watering system")
     try:
         for plant in plant_list:
@@ -15,6 +16,7 @@ def water_plants(plant_list: list) -> None:
 
 
 def test_watering_system() -> None:
+    """Demonstrate cleanup with both valid and invalid plant lists."""
     print("=== Garden Watering System ===\n")
     print("Testing normal watering...")
     plant_list: list = ["tomato", "lettuce", "carrots"]
@@ -25,3 +27,7 @@ def test_watering_system() -> None:
     water_plants(plant_list)
     print()
     print("Cleanup always happens, even with errors!")
+
+
+if __name__ == "__main__":
+    test_watering_system()
