@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta
+    content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"
+    name="viewport">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="translucent-black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="Intranet 42" name="apple-mobile-web-app-title">
+  <meta content="on" http-equiv="cleartype">
+  <link href="https://cdn.intra.42.fr/" rel="preconnect">
+  <link
+    href="https://projects.intra.42.fr/assets/42_logo_black-684989d43d629b3c0ff6fd7e1157ee04db9bb7a73fba8ec4e01543d650a1c607.png"
+    rel="icon" type="image/png">
+  <link
+    href="https://projects.intra.42.fr/assets/42_logo_black-684989d43d629b3c0ff6fd7e1157ee04db9bb7a73fba8ec4e01543d650a1c607.png"
+    rel="shortcut icon" type="image/png">
+  <link href="https://projects.intra.42.fr/opensearch.xml" rel="search" title="project"
+    type="application/opensearchdescription+xml">
+  <title>Intra Projects Python Module 00 Edit</title>
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token"
+    content="egBS8j+lum2Pcz6z54oO/nMn7aT03DEAFWBfLmdIWwlt+gwDgxbpPafVlAdt0lhYnRA54Ros8XEgWzMvJa9yXQ==">
+  <link rel="stylesheet" media="all"
+    href="./Intra Projects Python Module 00 Edit_files/application-9007830c6e6d61ed2b7b296f835c71af6214ec668b7b6faffbe906a149e6175d.css">
+  <link rel="stylesheet" media="screen" href="./Intra Projects Python Module 00 Edit_files/bzd7hlb.css">
+  <style>
+    .deprecated {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+  </style>
+  <script>
+    (function () {
+      this._environment = "production";
+
+      this._git_commit = "";
+
+      this._release = this._git_commit;
+
+    }).call(this);
+  </script>
+
+</head>
+
+<body class=" ">
+  <div class="notifications-flash-top-bar">
+
+  </div>
+  <script>
+    (function () {
+      this._notifCount = 0;
+
+      this._flashes = [];
+
+    }).call(this);
+  </script>
+
+  <div class="notifications-container hidden-xs" data-flashes-url="https://profile.intra.42.fr/flashes"
+    data-notifications-url="https://profile.intra.42.fr/notifications" style="top: 60px; left: 925.953px;">
+    <header class="notifications--header">
+      <span>notifications</span>
+      <a href="https://profile.intra.42.fr/notifications">See all notifications</a>
+    </header>
+    <ul class="menu-drop-list"></ul>
+  </div>
+
+
+  <div class="page">
+    <div class="left-sidebar-fix with-main-menu"></div>
+    <div class="page-sidebar left-main-container page-sidebar-fixed-left under-main-navbar">
+      <ul class="main-left-navbar">
+        <div class="_">
+          <li>
+            <a class="inactive" href="https://profile.intra.42.fr/"><span class="icon-user-2"></span>
+              <span class="visible-overlay">
+                Profile
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="active" href="https://projects.intra.42.fr/"><span class="icon-network-2-1"></span>
+              <span class="visible-overlay">
+                Projets
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="inactive" href="https://elearning.intra.42.fr/"><span class="icon-movie-play-1"></span>
+              <span class="visible-overlay">
+                E-learning
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="inactive" href="https://stackoverflowteams.com/c/42network"><span
+                class="icon-bubble-conversation-5"></span>
+              <span class="visible-overlay">
+                Forum
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="inactive" href="https://companies.intra.42.fr/"><span class="icon-briefcase"></span>
+              <span class="visible-overlay">
+                Companies
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="inactive" href="https://meta.intra.42.fr/"><span class="icon-compass-2"></span>
+              <span class="visible-overlay">
+                Meta
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="inactive" href="https://shop.intra.42.fr/"><span class="icon-shopping-1"></span>
+              <span class="visible-overlay">
+                Shop
+              </span>
+            </a>
+          </li>
+        </div>
+        <div class="admin-links">
+        </div>
+      </ul>
+      <div class="app-sidebar-left">
+        <div class="marked-title">Menu</div>
+        <div class="projects-menu-list">
+          <a class="project-item sidebar-item" href="https://projects.intra.42.fr/"><span
+              class="icon-briefcase project-status-icon"></span>
+            My projects
+          </a><a class="project-item sidebar-item" href="https://projects.intra.42.fr/projects/graph"><span
+              class="icon-globe project-status-icon"></span>
+            Holy Graph
+          </a><a class="project-item sidebar-item" href="https://projects.intra.42.fr/projects/list"><span
+              class="icon-list-1 project-status-icon"></span>
+            List projects
+          </a><a class="project-item sidebar-item" href="https://projects.intra.42.fr/cursus_subscriptions"><span
+              class="icon-list-1 project-status-icon"></span>
+            Available Cursus
+          </a>
+        </div>
+        <div class="marked-title">Your projects</div>
+        <div class="projects-menu-list">
+          <a class="project-item sidebar-item" href="https://projects.intra.42.fr/projects/42cursus-push_swap"><span
+              class="icon-box-2 project-status-icon"></span>
+            push_swap
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="page-content" data-turbolinks-scaffold="">
+      <div class="row">
+        <div class="main-top-menu">
+
+          <hr>
+          <div class="p-0 scale-introduction dancer from-down" id="introduction-55598">
+            <h3 class="font-weight-bold mb-1">Introduction</h3>
+            <p>
+              - Remain polite, courteous, respectful and constructive<br>throughout the evaluation process. The
+              well-being of the community<br>depends on it.<br><br>- Identify with the person (or the group) evaluated
+              the eventual<br>dysfunctions of the work. Take the time to discuss<br>and debate the problems you have
+              identified.<br><br>- You must consider that there might be some difference in how your<br>peers might have
+              understood the project's instructions and the<br>scope of its functionalities. Always keep an open mind
+              and grade<br>him/her as honestly as possible. The pedagogy is valid only and<br>only if peer-evaluation is
+              conducted seriously.<br>
+            </p>
+          </div>
+          <div class="p-0 scale-guidelines dancer from-down" id="guidelines-55598">
+            <h3 class="font-weight-bold mb-1">Guidelines</h3>
+            <p>
+              - Only grade the work that is in the student or group's<br>GiT repository.<br><br>- Double-check that the
+              GiT repository belongs to the student<br>or the group. Ensure that the work is for the relevant
+              project<br>and also check that "git clone" is used in an empty folder.<br><br>- Check carefully that no
+              malicious aliases was used to fool you<br>and make you evaluate something other than the content of
+              the<br>official repository.<br><br>- To avoid any surprises, carefully check that both the
+              evaluating<br>and the evaluated students have reviewed the possible scripts used<br>to facilitate the
+              grading.<br><br>- If the evaluating student has not completed that particular<br>project yet, it is
+              mandatory for this student to read the<br>entire subject prior to starting the defence.<br><br>- Use the
+              flags available on this scale to signal an empty repository,<br>non-functioning program, a norm error,
+              cheating etc. In these cases,<br>the grading is over and the final grade is 0 (or -42 in case
+              of<br>cheating). However, with the exception of cheating, you are<br>encouraged to continue to discuss
+              your work (even if you have not<br>finished it) in order to identify any issues that may have
+              caused<br>this failure and avoid repeating the same mistake in the future.<br><br>- Remember that for the
+              duration of the defence, no segfault,<br>no other unexpected, premature, uncontrolled or
+              unexpected<br>termination of the program, else the final grade is 0. Use the<br>appropriate flag. <br>You
+              should never have to edit any file except the configuration file if it exists.<br>If you want to edit a
+              file, take the time to explicit the reasons with the <br>evaluated student and make sure both of you are
+              okay with this.<br><br>- You must also verify the absence of memory leaks. Any memory allocated on the
+              heap must<br>be properly freed before the end of execution.<br>You are allowed to use any of the different
+              tools available on the computer, such as<br>leaks, valgrind, or e_fence. In case of memory leaks, tick the
+              appropriate flag.<br>
+            </p>
+          </div>
+
+          <hr>
+          <div class="dancer from-down" id="attachments-55598">
+            <h3 class="font-weight-bold mb-1">Attachments</h3>
+            <div class="project-attachments-list">
+            </div>
+
+            <div class="project-attachments-list">
+              <div class="project-attachment-item">
+                <h4 class="attachment-name">
+                  <span class="icon-file"></span>
+                  <a target="_blank" href="https://cdn.intra.42.fr/pdf/pdf/190844/en.subject.pdf">subject.pdf</a>
+                </h4>
+              </div>
+              <div class="project-attachment-item">
+                <h4 class="attachment-name">
+                  <span class="icon-file"></span>
+                  <a target="_blank" href="https://cdn.intra.42.fr/document/document/43514/main.py">main.py</a>
+                </h4>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <form class="simple_form form-horizontal" novalidate="novalidate" id="edit_scale_team_8994405"
+          action="https://projects.intra.42.fr/projects/python-module-00/project_sessions/15249/evaluations/12766/scales/55598/scale_teams/8994405"
+          accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden"
+            name="_method" value="patch"><input type="hidden" name="authenticity_token"
+            value="egBS8j+lum2Pcz6z54oO/nMn7aT03DEAFWBfLmdIWwlt+gwDgxbpPafVlAdt0lhYnRA54Ros8XEgWzMvJa9yXQ==">
+          <div class="scale-section-answers col-sm-12 scale-div">
+            <section class="scale-section-item dancer from-down" id="section-155144">
+              <div class="section-header">
+                <h3 class="font-weight-bold mb-1">PY_00</h3>
+                <p class="font-italic"></p>
+              </div>
+              <h4 class="scale-question-name">basics</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <ul>
+                <li>Only grade the work that is in the student's or group's Git repository.</li>
+                <li>Check that the following files exist and are properly named:
+                  • ex0/ft_hello_garden.py
+                  • ex1/ft_plot_area.py
+                  • ex2/ft_harvest_total.py
+                  • ex3/ft_plant_age.py
+                  • ex4/ft_water_reminder.py
+                  • ex5/ft_count_harvest_iterative.py, ft_count_harvest_recursive.py
+                  • ex6/ft_garden_summary.py
+                  • ex7/ft_seed_inventory.py</li>
+                <li>Verify no additional unauthorized files are present.
+                  If any file is missing or incorrectly named, the evaluation stops here.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][0][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="527994"
+                      name="[scale_team][answers_attributes][0][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][0][value]"
+                    id="radio_[scale_team][answers_attributes][0]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][0]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][0][value]"
+                    id="radio_[scale_team][answers_attributes][0]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][0]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+            </section>
+            <section class="scale-section-item dancer from-down" id="section-155145">
+              <div class="section-header">
+                <hr>
+                <h3 class="font-weight-bold mb-1">Exercises</h3>
+                <p class="font-italic"></p>
+              </div>
+              <h4 class="scale-question-name">Exercise 00 - ft_hello_garden</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Test ft_hello_garden.py (FUNCTION REQUIRED, NOT MAIN):</p>
+
+              <ul>
+                <li>Verify the file contains a function named ft_hello_garden() (not a main program).</li>
+                <li>Run the function and verify it outputs exactly "Hello, Garden Community!".</li>
+                <li>Check that the function takes no parameters.</li>
+                <li>Verify the function uses print() to display the message.</li>
+                <li>Ensure the file is in the ex0/ directory.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][1][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="527995"
+                      name="[scale_team][answers_attributes][1][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][1][value]"
+                    id="radio_[scale_team][answers_attributes][1]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][1]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][1][value]"
+                    id="radio_[scale_team][answers_attributes][1]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][1]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+              <h4 class="scale-question-name">Exercise 01 - ft_plot_area</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Test ft_plot_area.py (FUNCTION REQUIRED, NOT MAIN):</p>
+
+              <ul>
+                <li>Verify the file contains a function named ft_plot_area() (not a main program).</li>
+                <li>Run the function and test with different inputs like length=10, width=5 (should output "Plot area:
+                  50").</li>
+                <li>Test with length=7, width=3 (should output "Plot area: 21").</li>
+                <li>Test with length=1, width=1 (should output "Plot area: 1").</li>
+                <li>Verify the function correctly calculates area using multiplication.</li>
+                <li>Check that the output format matches exactly "Plot area: X".</li>
+                <li>Ensure the file is in the ex1/ directory.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][2][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="527996"
+                      name="[scale_team][answers_attributes][2][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][2][value]"
+                    id="radio_[scale_team][answers_attributes][2]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][2]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][2][value]"
+                    id="radio_[scale_team][answers_attributes][2]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][2]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+              <h4 class="scale-question-name">Exercise 02 - ft_harvest_total</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Test ft_harvest_total.py (FUNCTION REQUIRED, NOT MAIN):</p>
+
+              <ul>
+                <li>Verify the file contains a function named ft_harvest_total() (not a main program).</li>
+                <li>Test with inputs like day1=5, day2=8, day3=3 (should output "Total harvest: 16").</li>
+                <li>Test with day1=10, day2=0, day3=5 (should output "Total harvest: 15").</li>
+                <li>Test with all zeros: day1=0, day2=0, day3=0 (should output "Total harvest: 0").</li>
+                <li>Verify the function correctly adds the three values.</li>
+                <li>Check that the output format matches exactly "Total harvest: X".</li>
+                <li>Ensure the file is in the ex2/ directory.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][3][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="527997"
+                      name="[scale_team][answers_attributes][3][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][3][value]"
+                    id="radio_[scale_team][answers_attributes][3]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][3]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][3][value]"
+                    id="radio_[scale_team][answers_attributes][3]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][3]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+              <h4 class="scale-question-name">Exercise 03 - ft_plant_age</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Test ft_plant_age.py (FUNCTION REQUIRED, NOT MAIN):</p>
+
+              <ul>
+                <li>Verify the file contains a function named ft_plant_age() (not a main program).</li>
+                <li>Test with age=75 (should output "Plant is ready to harvest!").</li>
+                <li>Test with age=60 (should output "Plant needs more time to grow.").</li>
+                <li>Test with age=61 (should output "Plant is ready to harvest!").</li>
+                <li>Test with age=30 (should output "Plant needs more time to grow.").</li>
+                <li>Verify the condition correctly uses &gt; 60 (not &gt;= 60).</li>
+                <li>Ensure the file is in the ex3/ directory.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][4][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="527998"
+                      name="[scale_team][answers_attributes][4][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][4][value]"
+                    id="radio_[scale_team][answers_attributes][4]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][4]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][4][value]"
+                    id="radio_[scale_team][answers_attributes][4]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][4]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+              <h4 class="scale-question-name">Exercise 04 - ft_water_reminder</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Test ft_water_reminder.py (FUNCTION REQUIRED, NOT MAIN):</p>
+
+              <ul>
+                <li>Verify the file contains a function named ft_water_reminder() (not a main program).</li>
+                <li>Test with days=4 (should output "Water the plants!").</li>
+                <li>Test with days=2 (should output "Plants are fine").</li>
+                <li>Test with days=3 (should output "Water the plants!").</li>
+                <li>Test with days=1 (should output "Plants are fine").</li>
+                <li>Verify the condition correctly uses &gt; 2 (not &gt;= 2).</li>
+                <li>Ensure the file is in the ex4/ directory.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][5][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="527999"
+                      name="[scale_team][answers_attributes][5][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][5][value]"
+                    id="radio_[scale_team][answers_attributes][5]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][5]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][5][value]"
+                    id="radio_[scale_team][answers_attributes][5]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][5]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+              <h4 class="scale-question-name">Exercise 05 - ft_count_harvest_iterative ft_count_harvest_recursive</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Test ft_count_harvest.py (FUNCTIONS REQUIRED, NOT MAIN):</p>
+
+              <ul>
+                <li>Verify the file contains two functions named ft_count_harvest_iterative() and
+                  ft_count_harvest_recursive() (not a main program).</li>
+                <li>For ft_count_harvest_iterative():
+
+                  <ul>
+                    <li>Test with days=5 (should output "Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Harvest time!").
+                    </li>
+                    <li>Test with days=1 (should output "Day 1", "Harvest time!").</li>
+                    <li>Test with days=3 and verify it counts from 1 to 3 correctly.</li>
+                    <li>Verify the while or for loop correctly increments and stops at the right time.</li>
+                    <li>Check that "Harvest time!" appears at the end.</li>
+                  </ul>
+                </li>
+                <li>For ft_count_harvest_recursive():
+
+                  <ul>
+                    <li>Test with days=5 (should output "Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Harvest time!").
+                    </li>
+                    <li>Test with days=1 (should output "Day 1", "Harvest time!").</li>
+                    <li>Test with days=3 and verify it counts from 1 to 3 correctly.</li>
+                    <li>Verify the recursion correctly increments and stops at the right time (base case reached).</li>
+                    <li>Check that "Harvest time!" appears at the end.</li>
+                  </ul>
+                </li>
+                <li>Ensure the file is in the ex5/ directory.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][6][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="528000"
+                      name="[scale_team][answers_attributes][6][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][6][value]"
+                    id="radio_[scale_team][answers_attributes][6]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][6]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][6][value]"
+                    id="radio_[scale_team][answers_attributes][6]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][6]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+              <h4 class="scale-question-name">Exercise 06 - ft_garden_summary</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Test ft_garden_summary.py (FUNCTION REQUIRED, NOT MAIN):</p>
+
+              <ul>
+                <li>Verify the file contains a function named ft_garden_summary() (not a main program).</li>
+                <li>Test with garden_name="Community Garden", num_plants=25.</li>
+                <li>Test with garden_name="My Garden", num_plants=10.</li>
+                <li>Verify it correctly displays "Garden: [name]".</li>
+                <li>Verify it correctly displays "Plants: [number]".</li>
+                <li>Verify it displays "Status: Growing well!" exactly.</li>
+                <li>Check that string formatting works correctly.</li>
+                <li>Ensure the file is in the ex6/ directory.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][7][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="528001"
+                      name="[scale_team][answers_attributes][7][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][7][value]"
+                    id="radio_[scale_team][answers_attributes][7]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][7]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][7][value]"
+                    id="radio_[scale_team][answers_attributes][7]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][7]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+              <h4 class="scale-question-name">Exercise 07 - ft_seed_inventory</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Test ft_seed_inventory.py (FUNCTION REQUIRED, NOT MAIN):</p>
+
+              <ul>
+                <li>Verify the file contains a function named ft_seed_inventory() (not a main program).</li>
+                <li>Check that the function uses proper type annotations: ft_seed_inventory(seed_type: str, quantity:
+                  int, unit: str) -&gt; None.</li>
+                <li>Test with seed_type="tomato", quantity=15, unit="packets" (should output "Tomato seeds: 15 packets
+                  available").</li>
+                <li>Test with seed_type="carrot", quantity=8, unit="grams" (should output "Carrot seeds: 8 grams
+                  total").</li>
+                <li>Test with seed_type="lettuce", quantity=12, unit="area" (should output "Lettuce seeds: covers 12
+                  square meters").</li>
+                <li>Test with an unknown unit like "unknown" (should output "Unknown unit type").</li>
+                <li>Verify the function correctly capitalizes the seed type in output.</li>
+                <li>Ensure the file is in the ex7/ directory.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][8][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="528002"
+                      name="[scale_team][answers_attributes][8][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][8][value]"
+                    id="radio_[scale_team][answers_attributes][8]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][8]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][8][value]"
+                    id="radio_[scale_team][answers_attributes][8]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][8]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+            </section>
+            <section class="scale-section-item dancer from-down" id="section-155146">
+              <div class="section-header">
+                <hr>
+                <h3 class="font-weight-bold mb-1">General code quality</h3>
+                <p class="font-italic"></p>
+              </div>
+              <h4 class="scale-question-name">Code Quality and Best Practices</h4>
+              <p class="scale-section-guidelines">
+              </p>
+              <p>Code Quality Assessment:</p>
+
+              <ul>
+                <li>Are all functions properly defined with correct names
+                  (ft_hello_garden, ft_plot_area, ft_harvest_total, ft_seed_inventory, etc.)?</li>
+                <li>Is the code readable and well-structured?</li>
+                <li>Do the solutions demonstrate the intended Python concepts?</li>
+                <li>Are files in the correct directories (ex0/, ex1/, ex2/, ex3/, ex4/, ex5/, ex6/, ex7/)?</li>
+                <li>IMPORTANT: Each exercise should contain ONLY a function, not a main program.</li>
+              </ul>
+
+              <p></p>
+              <div class="scale-question-answers">
+                <div class="form-group hidden scale_team_answer_id">
+                  <div class="col-sm-10"><input class="form-control hidden"
+                      name="[scale_team][answers_attributes][9][id]" type="hidden" id="scale_team_answer_id"></div>
+                </div>
+                <div class="form-group hidden scale_team_answer_question_id">
+                  <div class="col-sm-10"><input class="form-control hidden" value="528003"
+                      name="[scale_team][answers_attributes][9][question_id]" type="hidden"
+                      id="scale_team_answer_question_id"></div>
+                </div>
+                <div class="btn-group block">
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][9][value]"
+                    id="radio_[scale_team][answers_attributes][9]_true" type="radio" value="1">
+                  <label class="btn btn-success checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][9]_true">
+                    <span class="icon-check"></span>
+                    Yes
+                  </label>
+                  <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][9][value]"
+                    id="radio_[scale_team][answers_attributes][9]_false" type="radio" value="0" checked="checked">
+                  <label class="btn btn-danger checkbox-label light-bg"
+                    for="radio_[scale_team][answers_attributes][9]_false">
+                    <span class="icon-times"></span>
+                    No
+                  </label>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-sm-12 scale-div pb-4">
+            <div class="dancer from-down" id="ratings-55598">
+              <h3 class="font-weight-bold mb-1">Ratings</h3>
+              <p class="marked-title">Don’t forget to check the flag corresponding to the defense</p>
+              <div class="btn-group block flags-buttons" data-radio-item="flag-small">
+                <label class="btn btn-default btn-success label_flag_ok on-active positive" for="scale_team_flag_id_1"
+                  name="scale_team[flag_id]">
+                  <span class="iconf-check-4"></span>
+                  Ok
+                </label>
+                <label class="btn btn-default btn-success label_flag_outstanding_project on-active positive"
+                  for="scale_team_flag_id_9" name="scale_team[flag_id]">
+                  <span class="iconf-star-1"></span>
+                  Outstanding project
+                </label>
+              </div>
+              <div class="btn-group block flags-buttons" data-radio-item="flag-small">
+                <label class="btn btn-danger btn-default label_flag_empty_work negative on-active"
+                  for="scale_team_flag_id_2" name="scale_team[flag_id]">
+                  <span class="iconf-iconf-folder-1"></span>
+                  Empty work
+                </label>
+                <label class="btn btn-danger btn-default label_flag_incomplete_work negative on-active"
+                  for="scale_team_flag_id_3" name="scale_team[flag_id]">
+                  <span class="iconf-file-attention"></span>
+                  Incomplete work
+                </label>
+                <label class="btn btn-danger btn-default label_flag_invalid_compilation negative on-active"
+                  for="scale_team_flag_id_5" name="scale_team[flag_id]">
+                  <span class="iconf-skull-2"></span>
+                  Invalid compilation
+                </label>
+                <label class="btn btn-danger btn-default label_flag_norme negative on-active" for="scale_team_flag_id_6"
+                  name="scale_team[flag_id]">
+                  <span class="iconf-receipt-1"></span>
+                  Norme
+                </label>
+                <label class="btn btn-danger btn-default label_flag_cheat negative on-active" for="scale_team_flag_id_7"
+                  name="scale_team[flag_id]">
+                  <span class="iconf-layers"></span>
+                  Cheat
+                </label>
+                <label class="btn btn-danger btn-default label_flag_crash negative on-active" for="scale_team_flag_id_8"
+                  name="scale_team[flag_id]">
+                  <span class="iconf-bomb"></span>
+                  Crash
+                </label>
+                <label class="btn btn-danger btn-default label_flag_concerning_situation negative on-active"
+                  for="scale_team_flag_id_11" name="scale_team[flag_id]">
+                  <span class="iconf-alert-2"></span>
+                  Concerning situation
+                </label>
+                <label class="btn btn-danger btn-default label_flag_leaks negative on-active"
+                  for="scale_team_flag_id_12" name="scale_team[flag_id]">
+                  <span class="iconf-blood"></span>
+                  Leaks
+                </label>
+                <label class="btn btn-danger btn-default label_flag_forbidden_function negative on-active"
+                  for="scale_team_flag_id_13" name="scale_team[flag_id]">
+                  <span class="iconf-delete-2"></span>
+                  Forbidden function
+                </label>
+                <label class="btn btn-danger btn-default label_flag_can’t_support_/_explain_code negative on-active"
+                  for="scale_team_flag_id_14" name="scale_team[flag_id]">
+                  <span class="iconf-bubble-attention-4"></span>
+                  Can’t support / explain code
+                </label>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-12 scale-div">
+            <h3 class="font-weight-bold mb-1">Conclusion</h3>
+            <div class="scale-final-evaluation hidden">
+              <div class="form-group radio_buttons optional scale_team_flag"><label
+                  class="col-sm-2 control-label radio_buttons optional">Flag</label>
+                <div class="col-sm-10"><input type="hidden" name="scale_team[flag_id]" value=""><span
+                    class="radio"><label for="scale_team_flag_id_1"><input class="radio_buttons optional" type="radio"
+                        value="1" checked="checked" name="scale_team[flag_id]"
+                        id="scale_team_flag_id_1">Ok</label></span><span class="radio"><label
+                      for="scale_team_flag_id_3"><input class="radio_buttons optional" type="radio" value="3"
+                        name="scale_team[flag_id]" id="scale_team_flag_id_3">Incomplete work</label></span><span
+                    class="radio"><label for="scale_team_flag_id_5"><input class="radio_buttons optional" type="radio"
+                        value="5" name="scale_team[flag_id]" id="scale_team_flag_id_5">Invalid
+                      compilation</label></span><span class="radio"><label for="scale_team_flag_id_6"><input
+                        class="radio_buttons optional" type="radio" value="6" name="scale_team[flag_id]"
+                        id="scale_team_flag_id_6">Norme</label></span><span class="radio"><label
+                      for="scale_team_flag_id_7"><input class="radio_buttons optional" type="radio" value="7"
+                        name="scale_team[flag_id]" id="scale_team_flag_id_7">Cheat</label></span><span
+                    class="radio"><label for="scale_team_flag_id_8"><input class="radio_buttons optional" type="radio"
+                        value="8" name="scale_team[flag_id]" id="scale_team_flag_id_8">Crash</label></span><span
+                    class="radio"><label for="scale_team_flag_id_9"><input class="radio_buttons optional" type="radio"
+                        value="9" name="scale_team[flag_id]" id="scale_team_flag_id_9">Outstanding
+                      project</label></span><span class="radio"><label for="scale_team_flag_id_11"><input
+                        class="radio_buttons optional" type="radio" value="11" name="scale_team[flag_id]"
+                        id="scale_team_flag_id_11">Concerning situation</label></span><span class="radio"><label
+                      for="scale_team_flag_id_12"><input class="radio_buttons optional" type="radio" value="12"
+                        name="scale_team[flag_id]" id="scale_team_flag_id_12">Leaks</label></span><span
+                    class="radio"><label for="scale_team_flag_id_13"><input class="radio_buttons optional" type="radio"
+                        value="13" name="scale_team[flag_id]" id="scale_team_flag_id_13">Forbidden
+                      Function</label></span><span class="radio"><label for="scale_team_flag_id_14"><input
+                        class="radio_buttons optional" type="radio" value="14" name="scale_team[flag_id]"
+                        id="scale_team_flag_id_14">Can’t support / explain code</label></span><span class="radio"><label
+                      for="scale_team_flag_id_2"><input class="radio_buttons optional" type="radio" value="2"
+                        name="scale_team[flag_id]" id="scale_team_flag_id_2">Empty work</label></span></div>
+              </div>
+            </div>
+            <input id="token" name="token" class="hidden" type="hidden">
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  <div aria-hidden="true" aria-labelledby="smartModalLabel" class="modal fade" id="smartModal" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
+            x
+          </button>
+          <h3 id="smartModalLabel">
+
+          </h3>
+        </div>
+        <div class="modal-body">
+          <h4 class="note-title"></h4>
+        </div>
+        <div class="modal-footer">
+          <button aria-hidden="true" class="btn" data-dismiss="modal">Cancel</button>
+          <button class="send btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div aria-hidden="true" aria-labelledby="flashModalLabel" class="modal fade" id="flashModal" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
+            x
+          </button>
+          <h3 id="flashModalLabel"></h3>
+        </div>
+        <div class="modal-body">
+          <h4 class="note-title">Flash modal content (raw)</h4>
+        </div>
+        <div class="modal-footer">
+          <button aria-hidden="true" class="btn btn-block btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-cache="true" class="hide"></div>
+
+  <script async="" await="" src="./Intra Projects Python Module 00 Edit_files/js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BJ34XNRJCV');
+  </script>
+
+  <script>
+    var jsClasses = ["new_message", "topic-reply"];
+    jsClasses.forEach(function (className) {
+      Array.prototype.forEach.call(document.getElementsByClassName(className), function (e) {
+        e.classList.add("js-hidden");
+      });
+    });
+  </script>
+  <script
+    src="./Intra Projects Python Module 00 Edit_files/application-26abb532f318c8a71fcdfa398c052b1c6b94a108b47f8eef9c814391834a4042.js"></script>
+
+
+
+
+  <textarea readonly=""
+    style="font-size: 12pt; border: 0px; padding: 0px; margin: 0px; position: absolute; left: -9999px; top: 33.5px;"></textarea>
+</body>
+
+</html>

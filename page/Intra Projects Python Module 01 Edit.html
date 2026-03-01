@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta
+    content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"
+    name="viewport">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="translucent-black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="Intranet 42" name="apple-mobile-web-app-title">
+  <meta content="on" http-equiv="cleartype">
+  <link href="https://cdn.intra.42.fr/" rel="preconnect">
+  <link
+    href="https://projects.intra.42.fr/assets/42_logo_black-684989d43d629b3c0ff6fd7e1157ee04db9bb7a73fba8ec4e01543d650a1c607.png"
+    rel="icon" type="image/png">
+  <link
+    href="https://projects.intra.42.fr/assets/42_logo_black-684989d43d629b3c0ff6fd7e1157ee04db9bb7a73fba8ec4e01543d650a1c607.png"
+    rel="shortcut icon" type="image/png">
+  <link href="https://projects.intra.42.fr/opensearch.xml" rel="search" title="project"
+    type="application/opensearchdescription+xml">
+  <title>Intra Projects Python Module 01 Edit</title>
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token"
+    content="n0sIDSITIQFio7ms9VNLRDvLl5/+LRATzF0fIGOFYo/ugzXB4mF3GQ/bDrmisZwQc4wQzXlyebwUac90pNJjYA==">
+  <link rel="stylesheet" media="all"
+    href="./Intra Projects Python Module 01 Edit_files/application-9007830c6e6d61ed2b7b296f835c71af6214ec668b7b6faffbe906a149e6175d.css">
+  <link rel="stylesheet" media="screen" href="./Intra Projects Python Module 01 Edit_files/bzd7hlb.css">
+  <style>
+    .deprecated {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+  </style>
+  <script>
+    (function () {
+      this._user = {
+        "login": "mmaarafi",
+        "id": 189554,
+        "url": "https://profile.intra.42.fr/users/mmaarafi"
+      };
+
+      this._consumer_address = 'wss://profile.intra.42.fr/cable';
+
+    }).call(this);
+  </script>
+  <script>
+    (function () {
+      this._environment = "production";
+
+      this._git_commit = "";
+
+      this._release = this._git_commit;
+
+    }).call(this);
+  </script>
+
+</head>
+
+<body class=" ">
+  <div class="notifications-flash-top-bar">
+
+  </div>
+  <script>
+    (function () {
+      this._notifCount = 0;
+
+      this._flashes = [];
+
+    }).call(this);
+  </script>
+
+  <div class="notifications-container hidden-xs" data-flashes-url="https://profile.intra.42.fr/flashes"
+    data-notifications-url="https://profile.intra.42.fr/notifications" style="top: 60px; left: 802.531px;">
+    <header class="notifications--header">
+      <span>notifications</span>
+      <a href="https://profile.intra.42.fr/notifications">See all notifications</a>
+    </header>
+    <ul class="menu-drop-list"></ul>
+  </div>
+
+  <div class="main-navbar">
+    <div class="main-navbar-left">
+      <div class="main-navbar-logo" data-turbolinks-scaffold="">
+        <a href="https://profile.intra.42.fr/"><img alt="42"
+            src="./Intra Projects Python Module 01 Edit_files/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg">
+        </a>
+      </div>
+      <span class="hidden-sidebars main-menu-trigger lines-button x" data-trigger-menu="">
+        <span class="fal fa-bars"></span>
+      </span>
+      <a class="search-mobile-button hidden-sidebars fal fa-search" href="https://profile.intra.42.fr/searches"></a>
+      <form action="https://profile.intra.42.fr/searches/search" class="main-navbar-search hidden-xs js-search"
+        data-project-url="https://projects.intra.42.fr/" data-user-url="https://profile.intra.42.fr/users/"
+        method="get">
+        <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input autocomplete="off"
+            autofocus="" class="search-input tt-input" name="query" placeholder="search..." spellcheck="false"
+            dir="auto" style="position: relative; vertical-align: top;" aria-activedescendant=""
+            aria-owns="undefined_listbox" role="combobox" aria-readonly="true" aria-autocomplete="list"><span
+            role="status" aria-live="polite" class="visuallyhidden"></span>
+          <pre aria-hidden="true"
+            style="position: absolute; visibility: hidden; white-space: pre; font-family: futura-pt, Helvetica, &quot;Sans serif&quot;; font-size: 14.56px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+          <div role="listbox" class="tt-menu"
+            style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+            <div role="presentation" class="tt-dataset tt-dataset-0"></div>
+            <div role="presentation" class="tt-dataset tt-dataset-1"></div>
+          </div>
+        </span>
+      </form>
+    </div>
+  </div>
+    <div class="page-content" data-turbolinks-scaffold="">
+      <div class="row">
+        <div class="main-top-menu">
+              <hr>
+              <div class="dancer from-down" id="attachments-56123">
+                <h3 class="font-weight-bold mb-1">Attachments</h3>
+                <div class="project-attachments-list">
+                </div>
+
+                <div class="project-attachments-list">
+                  <div class="project-attachment-item">
+                    <h4 class="attachment-name">
+                      <span class="icon-file"></span>
+                      <a target="_blank" href="https://cdn.intra.42.fr/pdf/pdf/191972/en.subject.pdf">subject.pdf</a>
+                    </h4>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <form class="simple_form form-horizontal" novalidate="novalidate" id="edit_scale_team_8998099"
+              action="https://projects.intra.42.fr/projects/python-module-01/project_sessions/15250/evaluations/12767/scales/56123/scale_teams/8998099"
+              accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden"
+                name="_method" value="patch"><input type="hidden" name="authenticity_token"
+                value="n0sIDSITIQFio7ms9VNLRDvLl5/+LRATzF0fIGOFYo/ugzXB4mF3GQ/bDrmisZwQc4wQzXlyebwUac90pNJjYA==">
+              <div class="scale-section-answers col-sm-12 scale-div">
+                <section class="scale-section-item dancer from-down" id="section-156851">
+                  <div class="section-header">
+                    <h3 class="font-weight-bold mb-1">PY_01</h3>
+                    <p class="font-italic"></p>
+                  </div>
+                  <h4 class="scale-question-name">Basics</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <ul>
+                    <li>Only grade the work that is in the learner's or group's Git repository.</li>
+                    <li>Check that the following files exist and are properly named:
+                      • ex0/ft_garden_intro.py
+                      • ex1/ft_garden_data.py
+                      • ex2/ft_plant_growth.py
+                      • ex3/ft_plant_factory.py
+                      • ex4/ft_garden_security.py
+                      • ex5/ft_plant_types.py
+                      • ex6/ft_garden_analytics.py
+
+                      <ul>
+                        <li>Verify no additional unauthorized files are present.
+                          If any file is missing or incorrectly named, the evaluation stops here.</li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][0][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533960"
+                          name="[scale_team][answers_attributes][0][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][0][value]"
+                        id="radio_[scale_team][answers_attributes][0]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][0]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][0][value]"
+                        id="radio_[scale_team][answers_attributes][0]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][0]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <h4 class="scale-question-name">General Instructions</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>During the evaluation of each exercises, ensure the following general instructions are met:</p>
+
+                  <ul>
+                    <li>The code must be written in Python 3.10+ or higher.</li>
+                    <li>The code must resspect the flake8 linter standards with no errors.</li>
+                    <li>A proper naming convention for functions, classes and methods is followed.</li>
+                    <li>A proper docstring is included in the code.</li>
+                    <li>Type hints are encouraged for functions and methode but not mandatory.</li>
+                    <li>the learner don't need to handle input validation unless explicitly mentioned</li>
+                    <li>All programs must run without errors or crashes.</li>
+                  </ul>
+
+                  <p>If any of these general instructions are not met, the evaluation must be stop.</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][1][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533961"
+                          name="[scale_team][answers_attributes][1][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][1][value]"
+                        id="radio_[scale_team][answers_attributes][1]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][1]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][1][value]"
+                        id="radio_[scale_team][answers_attributes][1]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][1]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </section>
+                <section class="scale-section-item dancer from-down" id="section-156852">
+                  <div class="section-header">
+                    <hr>
+                    <h3 class="font-weight-bold mb-1">Exercises</h3>
+                    <p class="font-italic"></p>
+                  </div>
+                  <h4 class="scale-question-name">Exercise 0 - Planting Your First Seed (Program Structure)</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>Test the ft_garden_intro.py program:</p>
+
+                  <p>Basic functionality:<br>
+                    • Run the program: python ex0/ft_garden_intro.py<br>
+                    • Verify the program uses the <code>if __name__ == "__main__":</code> pattern<br>
+                    • Check that plant information is stored in simple variables<br>
+                    • Verify the program displays information using print()<br>
+                    • Ask the learner to explain what <code>if __name__ == "__main__":</code> means<br>
+                    • Ask the learner why this pattern is important in Python</p>
+
+                  <p>Key concepts to verify:<br>
+                    • Correct use of <code>if __name__ == "__main__":</code><br>
+                    • Variables to store data (name, height, age)<br>
+                    • Print statements to display information</p>
+
+                  <p>Understanding check:<br>
+                    • Ask: "What happens if you remove the <code>if __name__ == "__main__":</code> line?"<br>
+                    • Ask: "When would this code NOT run?"<br>
+                    • Verify they understand this is the program's entry point</p>
+
+                  <p>Edge cases:<br>
+                    • Output is readable and well-formatted<br>
+                    • Code structure is clean and simple</p>
+
+                  <p>Does the program demonstrate understanding of basic Python program structure?</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][2][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533962"
+                          name="[scale_team][answers_attributes][2][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][2][value]"
+                        id="radio_[scale_team][answers_attributes][2]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][2]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][2][value]"
+                        id="radio_[scale_team][answers_attributes][2]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][2]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <h4 class="scale-question-name">Exercise 1 - Garden Data Organizer (Classes)</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>Test the ft_garden_data.py program:</p>
+
+                  <p>Basic functionality:<br>
+                    • Run the program: python ex1/ft_garden_data.py<br>
+                    • Verify the program defines and uses a CLASS structure<br>
+                    • Check that plant data is organized using class instances<br>
+                    • Verify the program displays plant information correctly<br>
+                    • Ask the learner to explain what a class is and why they used it<br>
+                    • Ask the learner to show where they defined the class and created instances</p>
+
+                  <p>Key concepts to verify:<br>
+                    • Class definition with proper syntax<br>
+                    • Object instantiation (creating instances)<br>
+                    • Basic attributes (plant properties)<br>
+                    • Simple display of plant data</p>
+
+                  <p>Edge cases:<br>
+                    • Output is readable and well-formatted<br>
+                    • Class structure is logical and appropriate</p>
+
+                  <p>Does the program demonstrate understanding of classes as data organization tools?</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][3][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533963"
+                          name="[scale_team][answers_attributes][3][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][3][value]"
+                        id="radio_[scale_team][answers_attributes][3]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][3]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][3][value]"
+                        id="radio_[scale_team][answers_attributes][3]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][3]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <h4 class="scale-question-name">Exercise 2 - Plant Growth Simulator (Methods)</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>Test the ft_plant_growth.py program:</p>
+
+                  <p>Basic functionality:<br>
+                    • Run the program: python ex2/ft_plant_growth.py<br>
+                    • Verify the program uses METHODS to perform actions on plants<br>
+                    • Check that plants can grow and age over time<br>
+                    • Verify the simulation shows changes over multiple days<br>
+                    • Ask the learner to explain what methods are and why they used them<br>
+                    • Ask the learner to demonstrate calling methods on plant objects</p>
+
+                  <p>Key concepts to verify:<br>
+                    • Method definition within classes<br>
+                    • Method calls on object instances<br>
+                    • State changes through method execution<br>
+                    • Simulation logic using methods</p>
+
+                  <p>Test scenarios:<br>
+                    • Plants grow when methods are called<br>
+                    • Plant state changes are persistent<br>
+                    • Multiple method calls work correctly<br>
+                    • Output shows progression over time</p>
+
+                  <p>Does the program demonstrate understanding of methods as actions objects can perform?</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][4][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533964"
+                          name="[scale_team][answers_attributes][4][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][4][value]"
+                        id="radio_[scale_team][answers_attributes][4]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][4]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][4][value]"
+                        id="radio_[scale_team][answers_attributes][4]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][4]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <h4 class="scale-question-name">Exercise 3 - Plant Factory (Initialization)</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>Test the ft_plant_factory.py program:</p>
+
+                  <p>Basic functionality:<br>
+                    • Run the program: python ex3/ft_plant_factory.py<br>
+                    • Verify the program uses <code>__init__</code> method for object initialization<br>
+                    • Check that plants are created with initial values<br>
+                    • Verify multiple plants can be created with different properties<br>
+                    • Ask the learner to explain what <code>__init__</code> does and why it's needed<br>
+                    • Ask the learner to show how they set initial values for plant attributes</p>
+
+                  <p>Key concepts to verify:<br>
+                    • <code>__init__</code> method definition and usage<br>
+                    • Parameter passing during object creation<br>
+                    • Initial state setting for new objects<br>
+                    • Multiple object creation with different initial values</p>
+
+                  <p>Test scenarios:<br>
+                    • Plants are created with specified initial properties<br>
+                    • Different plants have different initial values<br>
+                    • Factory pattern creates multiple plants efficiently<br>
+                    • All created plants function correctly</p>
+
+                  <p>Does the program demonstrate understanding of object initialization and construction?</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][5][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533965"
+                          name="[scale_team][answers_attributes][5][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][5][value]"
+                        id="radio_[scale_team][answers_attributes][5]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][5]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][5][value]"
+                        id="radio_[scale_team][answers_attributes][5]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][5]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <h4 class="scale-question-name">Exercise 4 - Garden Security System (Encapsulation)</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>Test the ft_garden_security.py program:</p>
+
+                  <p>Basic functionality:<br>
+                    • Run the program: python ex4/ft_garden_security.py<br>
+                    • Verify the program uses ENCAPSULATION to protect data<br>
+                    • Check that invalid data is rejected (negative values, etc.)<br>
+                    • Verify access to plant data is controlled through methods<br>
+                    • Ask the learner to explain what encapsulation is and why it's important<br>
+                    • Ask the learner to show how they protected plant data from invalid modifications</p>
+
+                  <p>Key concepts to verify:<br>
+                    • Protected attributes (using underscore convention)<br>
+                    • Getter and setter methods for controlled access<br>
+                    • Data validation before allowing changes<br>
+                    • Error handling for invalid operations</p>
+
+                  <p>Test scenarios:<br>
+                    • Valid data updates work correctly<br>
+                    • Invalid data is rejected with appropriate messages<br>
+                    • Direct attribute access is discouraged/prevented<br>
+                    • Plant data integrity is maintained</p>
+
+                  <p>Does the program demonstrate understanding of data protection and controlled access?</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][6][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533966"
+                          name="[scale_team][answers_attributes][6][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][6][value]"
+                        id="radio_[scale_team][answers_attributes][6]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][6]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][6][value]"
+                        id="radio_[scale_team][answers_attributes][6]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][6]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <h4 class="scale-question-name">Exercise 5 - Specialized Plant Types (Inheritance)</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>Test the ft_plant_types.py program:</p>
+
+                  <p>Basic functionality:<br>
+                    • Run the program: python ex5/ft_plant_types.py<br>
+                    • Verify the program uses INHERITANCE to create specialized plant types<br>
+                    • Check that different plant types (Flower, Tree, Vegetable) exist<br>
+                    • Verify each type has both common and specialized features<br>
+                    • Ask the learner to explain inheritance and why they used it<br>
+                    • Ask the learner to show the parent-child relationships between classes</p>
+
+                  <p>Key concepts to verify:<br>
+                    • Base class (Plant) with common features<br>
+                    • Derived classes (Flower, Tree, Vegetable) with specialized features<br>
+                    • super() calls to parent class methods<br>
+                    • Method overriding for specialized behavior</p>
+
+                  <p>Test scenarios:<br>
+                    • All plant types share common functionality<br>
+                    • Each type has unique features (blooming, shade, nutrition)<br>
+                    • Inheritance chain works correctly<br>
+                    • Specialized methods function as expected</p>
+
+                  <p>Does the program demonstrate understanding of inheritance and code reuse?</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][7][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533967"
+                          name="[scale_team][answers_attributes][7][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][7][value]"
+                        id="radio_[scale_team][answers_attributes][7]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][7]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][7][value]"
+                        id="radio_[scale_team][answers_attributes][7]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][7]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <h4 class="scale-question-name">Exercise 6 - Garden Analytics Platform (Advanced OOP)</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>Test the ft_garden_analytics.py program:</p>
+
+                  <p>Basic functionality:<br>
+                    • Run the program: python ex6/ft_garden_analytics.py<br>
+                    • Verify the program demonstrates ADVANCED OOP concepts<br>
+                    • Check for nested classes, inheritance chains, class methods<br>
+                    • Verify distinction between member and non-member functions<br>
+                    • Ask the learner to explain the advanced concepts they implemented</p>
+
+                  <p>Key concepts to verify:<br>
+                    • Nested classes (class within a class)<br>
+                    • Inheritance chains (A -&gt; B -&gt; C)<br>
+                    • Class methods (using classmethod()) vs instance methods<br>
+                    • Static methods (using staticmethod()) vs regular functions<br>
+                    • Non-member functions (outside any class)</p>
+
+                  <p>Test scenarios:<br>
+                    • Nested class functionality works correctly<br>
+                    • Inheritance chain demonstrates proper super() usage<br>
+                    • Class methods can create instances without decorators<br>
+                    • Static methods work without instance using traditional syntax<br>
+                    • Non-member functions operate on class instances</p>
+
+                  <p>Advanced concepts discussion:<br>
+                    • Ask about when to use each type of method<br>
+                    • Discuss the benefits of nested classes<br>
+                    • Explain the inheritance chain design choices</p>
+
+                  <p>Does the program demonstrate mastery of advanced OOP concepts?</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][8][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533968"
+                          name="[scale_team][answers_attributes][8][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][8][value]"
+                        id="radio_[scale_team][answers_attributes][8]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][8]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][8][value]"
+                        id="radio_[scale_team][answers_attributes][8]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][8]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </section>
+                <section class="scale-section-item dancer from-down" id="section-156853">
+                  <div class="section-header">
+                    <hr>
+                    <h3 class="font-weight-bold mb-1">General Code Quality and Programming Understanding</h3>
+                    <p class="font-italic"></p>
+                  </div>
+                  <h4 class="scale-question-name">Overall Understanding and Code Quality</h4>
+                  <p class="scale-section-guidelines">
+                  </p>
+                  <p>Evaluate the overall understanding and code quality:</p>
+
+                  <p>Programming Concept Mastery:<br>
+                    • Can the learner explain how Python programs are structured?<br>
+                    • Do they understand the difference between classes and objects?<br>
+                    • Do they understand when and why to use inheritance?<br>
+                    • Can they explain encapsulation benefits?<br>
+                    • Do they understand method types (instance, class, static)?</p>
+
+                  <p>Code Quality:<br>
+                    • Is the code well-structured and readable?<br>
+                    • Are programming principles applied appropriately?<br>
+                    • Are the garden/plant metaphors used consistently?<br>
+                    • Does the progression from simple to complex make sense?</p>
+
+                  <p>Discovery-Based Learning:<br>
+                    • Ask the learner how they discovered each concept<br>
+                    • Did they understand why each concept was needed?<br>
+                    • Can they apply these concepts to other domains?</p>
+
+                  <p>Note: This is for feedback purposes and doesn't fail the evaluation.<br>
+                    Focus on understanding rather than perfect implementation.</p>
+
+                  <p></p>
+                  <div class="scale-question-answers">
+                    <div class="form-group hidden scale_team_answer_id">
+                      <div class="col-sm-10"><input class="form-control hidden"
+                          name="[scale_team][answers_attributes][9][id]" type="hidden" id="scale_team_answer_id"></div>
+                    </div>
+                    <div class="form-group hidden scale_team_answer_question_id">
+                      <div class="col-sm-10"><input class="form-control hidden" value="533969"
+                          name="[scale_team][answers_attributes][9][question_id]" type="hidden"
+                          id="scale_team_answer_question_id"></div>
+                    </div>
+                    <div class="btn-group block">
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][9][value]"
+                        id="radio_[scale_team][answers_attributes][9]_true" type="radio" value="1">
+                      <label class="btn btn-success checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][9]_true">
+                        <span class="icon-check"></span>
+                        Yes
+                      </label>
+                      <input autocomplete="off" class="checkbox-input" name="[scale_team][answers_attributes][9][value]"
+                        id="radio_[scale_team][answers_attributes][9]_false" type="radio" value="0" checked="checked">
+                      <label class="btn btn-danger checkbox-label light-bg"
+                        for="radio_[scale_team][answers_attributes][9]_false">
+                        <span class="icon-times"></span>
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="col-sm-12 scale-div pb-4">
+                <div class="dancer from-down" id="ratings-56123">
+                  <h3 class="font-weight-bold mb-1">Ratings</h3>
+                  <p class="marked-title">Don’t forget to check the flag corresponding to the defense</p>
+                  <div class="btn-group block flags-buttons" data-radio-item="flag-small">
+                    <label class="btn btn-default btn-success label_flag_ok on-active positive"
+                      for="scale_team_flag_id_1" name="scale_team[flag_id]">
+                      <span class="iconf-check-4"></span>
+                      Ok
+                    </label>
+                    <label class="btn btn-default btn-success label_flag_outstanding_project on-active positive"
+                      for="scale_team_flag_id_9" name="scale_team[flag_id]">
+                      <span class="iconf-star-1"></span>
+                      Outstanding project
+                    </label>
+                  </div>
+                  <div class="btn-group block flags-buttons" data-radio-item="flag-small">
+                    <label class="btn btn-danger btn-default label_flag_empty_work negative on-active"
+                      for="scale_team_flag_id_2" name="scale_team[flag_id]">
+                      <span class="iconf-iconf-folder-1"></span>
+                      Empty work
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_incomplete_work negative on-active"
+                      for="scale_team_flag_id_3" name="scale_team[flag_id]">
+                      <span class="iconf-file-attention"></span>
+                      Incomplete work
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_invalid_compilation negative on-active"
+                      for="scale_team_flag_id_5" name="scale_team[flag_id]">
+                      <span class="iconf-skull-2"></span>
+                      Invalid compilation
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_norme negative on-active"
+                      for="scale_team_flag_id_6" name="scale_team[flag_id]">
+                      <span class="iconf-receipt-1"></span>
+                      Norme
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_cheat negative on-active"
+                      for="scale_team_flag_id_7" name="scale_team[flag_id]">
+                      <span class="iconf-layers"></span>
+                      Cheat
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_crash negative on-active"
+                      for="scale_team_flag_id_8" name="scale_team[flag_id]">
+                      <span class="iconf-bomb"></span>
+                      Crash
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_concerning_situation negative on-active"
+                      for="scale_team_flag_id_11" name="scale_team[flag_id]">
+                      <span class="iconf-alert-2"></span>
+                      Concerning situation
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_leaks negative on-active"
+                      for="scale_team_flag_id_12" name="scale_team[flag_id]">
+                      <span class="iconf-blood"></span>
+                      Leaks
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_forbidden_function negative on-active"
+                      for="scale_team_flag_id_13" name="scale_team[flag_id]">
+                      <span class="iconf-delete-2"></span>
+                      Forbidden function
+                    </label>
+                    <label class="btn btn-danger btn-default label_flag_can’t_support_/_explain_code negative on-active"
+                      for="scale_team_flag_id_14" name="scale_team[flag_id]">
+                      <span class="iconf-bubble-attention-4"></span>
+                      Can’t support / explain code
+                    </label>
+                  </div>
+                </div>
+  <div aria-hidden="true" aria-labelledby="smartModalLabel" class="modal fade" id="smartModal" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
+            x
+          </button>
+          <h3 id="smartModalLabel">
+
+          </h3>
+        </div>
+        <div class="modal-body">
+          <h4 class="note-title"></h4>
+        </div>
+        <div class="modal-footer">
+          <button aria-hidden="true" class="btn" data-dismiss="modal">Cancel</button>
+          <button class="send btn btn-primary">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div aria-hidden="true" aria-labelledby="flashModalLabel" class="modal fade" id="flashModal" role="dialog"
+    tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
+            x
+          </button>
+          <h3 id="flashModalLabel"></h3>
+        </div>
+        <div class="modal-body">
+          <h4 class="note-title">Flash modal content (raw)</h4>
+        </div>
+        <div class="modal-footer">
+          <button aria-hidden="true" class="btn btn-block btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-cache="true" class="hide"></div>
+
+  <script async="" await="" src="./Intra Projects Python Module 01 Edit_files/js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BJ34XNRJCV');
+  </script>
+
+  <script>
+    var jsClasses = ["new_message", "topic-reply"];
+    jsClasses.forEach(function (className) {
+      Array.prototype.forEach.call(document.getElementsByClassName(className), function (e) {
+        e.classList.add("js-hidden");
+      });
+    });
+  </script>
+  <script
+    src="./Intra Projects Python Module 01 Edit_files/application-26abb532f318c8a71fcdfa398c052b1c6b94a108b47f8eef9c814391834a4042.js"></script>
+
+
+
+
+</body>
+
+</html>
