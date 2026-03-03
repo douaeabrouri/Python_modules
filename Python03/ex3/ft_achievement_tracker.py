@@ -3,10 +3,15 @@
 if __name__ == "__main__":
     print("=== Achievement Tracker System ===\n")
 
-    alice: set = {'first_kill', 'level_10', 'treasure_hunter', 'speed_demon'}
-    bob: set = {'first_kill', 'level_10', 'boss_slayer', 'collector'}
-    charlie: set = {'level_10', 'treasure_hunter', 'boss_slayer',
-                'speed_demon', 'perfectionist'}
+    alice: set = {"first_kill", "level_10", "treasure_hunter", "speed_demon"}
+    bob: set = {"first_kill", "level_10", "boss_slayer", "collector"}
+    charlie: set = {
+        "level_10",
+        "treasure_hunter",
+        "boss_slayer",
+        "speed_demon",
+        "perfectionist",
+    }
     print(f"Player alice achievements: {alice}")
     print(f"Player bob achievements: {bob}")
     print(f"Player charlie achievements: {charlie}")
@@ -22,13 +27,13 @@ if __name__ == "__main__":
     for achievement in all_achievements:
         count: int = 0
         if achievement in alice:
-          count += 1
+            count += 1
         if achievement in bob:
-          count += 1
+            count += 1
         if achievement in charlie:
-          count += 1
+            count += 1
         if count == 1:
-          rare.add(achievement)
+            rare.add(achievement)
     print(f"Rare achievements (1 player): {rare}")
     print()
     alice_bob_common = alice.intersection(bob)
