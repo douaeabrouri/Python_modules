@@ -80,5 +80,5 @@ if __name__ == "__main__":
             print(f"Dictionary values: {key_str3}")
             result: bool = "sword" in inventory
             print(f"Sample lookup - 'sword' in inventory: {result}")
-    except Exception as e:
+    except ValueError as e:
         print(f"ERROR : {e}")
