@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+<<<<<<< HEAD
 import sys
 
 
@@ -82,3 +83,6 @@ if __name__ == "__main__":
             print(f"Sample lookup - 'sword' in inventory: {result}")
     except ValueError as e:
         print(f"ERROR : {e}")
+=======
+print(typ)    
+>>>>>>> 9de238f (.)
