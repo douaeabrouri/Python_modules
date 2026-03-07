@@ -20,6 +20,7 @@ class FloweringPlant(Plant):
         self.is_blooming = True
 
     def get_info(self) -> str:
+        """Ternary Operator"""
         status = "blooming" if self.is_blooming else "not blooming"
         return f"{self.name}: {self.height}cm, {self.color} flowers ({status})"
 
