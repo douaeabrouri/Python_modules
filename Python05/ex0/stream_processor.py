@@ -3,7 +3,6 @@ from abc import ABC, abstractmethod
 from typing import Any
 
 class DataProcessor(ABC):
-
     @abstractmethod
     def process(self, data: Any) -> str:
         pass
@@ -70,7 +69,7 @@ if __name__ == "__main__":
     if num_processor.validate(numeric_data):
        print("Validation: Numeric data verified")
        result = num_processor.process(numeric_data)
-       print(f"Output: {result}\n")
+       num_processor.format_output(result)
     print("Initializing Text Processor...")
     text_processor = TextProcessor()
     print('Processing data: "Hello Nexus World"')
@@ -78,7 +77,7 @@ if __name__ == "__main__":
     if text_processor.validate(text_data):
         print("Validation: Text data verified")
         result = text_processor.process(text_data)
-        print(f"Output: {result}\n")
+        text_processor.format_output(result)
         print("Initializing Log Processor...")
     log_processor = LogProcessor()
     print('Processing data: "ERROR: Connection timeout"')
@@ -86,7 +85,7 @@ if __name__ == "__main__":
     if log_processor.validate(log_data):
         print("Validation: Log entry verified")
         result = log_processor.process(log_data)
-        print(f"Output: {result}")
+        log_processor.format_output(result)
     print("\n=== Polymorphic Processing Demo ===")
     print("Processing multiple data types through same interface...")
     test_cases: dict = [
