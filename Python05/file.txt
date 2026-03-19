@@ -1,0 +1,164 @@
+1. Imports (abc, typing, collections)
+
+2. ProcessingStage (Protocol)
+   - process(data) -> Any
+
+3. ProcessingPipeline (ABC)
+   - __init__(pipeline_id)
+   - add_stage(stage)
+   - process(data) -> abstract
+
+4. InputStage
+   - process(data) -> dict
+
+5. TransformStage
+   - process(data) -> dict
+
+6. OutputStage
+   - process(data) -> str
+
+7. JSONAdapter(ProcessingPipeline)
+   - process(data) -> handles JSON strings
+
+8. CSVAdapter(ProcessingPipeline)
+   - process(data) -> handles CSV strings
+
+9. StreamAdapter(ProcessingPipeline)
+   - process(data) -> handles stream data
+
+10. NexusManager
+    - add_pipeline(pipeline)
+    - process_data(data)
+
+11. main()
+
+
+the code 
+
+#!/usr/bin/env python3
+
+from abc import ABC, abstractmethod
+from typing import Any, Protocol, List, Union
+
+
+# ===================== PROTOCOL =====================
+
+class ProcessingStage(Protocol):
+    def process(self, data: Any) -> Any:
+        ...
+
+
+# ===================== STAGES =====================
+
+class InputStage:
+    def process(self, data: Any) -> Any:
+        print("InputStage: receiving data...")
+        return data
+
+
+class TransformStage:
+    def process(self, data: Any) -> Any:
+        print("TransformStage: transforming data...")
+        return str(data).upper()
+
+
+class OutputStage:
+    def process(self, data: Any) -> Any:
+        print(f"OutputStage: final output -> {data}")
+        return data
+
+
+# ===================== PIPELINE BASE =====================
+
+class ProcessingPipeline(ABC):
+
+    def __init__(self, pipeline_id: str):
+        self.pipeline_id = pipeline_id
+        self.stages: List[ProcessingStage] = []
+
+    def add_stage(self, stage: ProcessingStage) -> None:
+        self.stages.append(stage)
+
+    def run(self, data: Any) -> Any:
+        for stage in self.stages:
+            try:
+                data = stage.process(data)
+            except Exception as e:
+                print(f"ERROR in stage: {e}")
+        return data
+
+    @abstractmethod
+    def process(self, data: Any) -> Union[str, Any]:
+        pass
+
+
+# ===================== ADAPTERS =====================
+
+class JSONAdapter(ProcessingPipeline):
+
+    def process(self, data: Any) -> Union[str, Any]:
+        try:
+            print(f"[JSON Pipeline {self.pipeline_id}] Starting...")
+            result = self.run(data)
+            return f"JSON Output: {result}"
+        except Exception as e:
+            return f"JSON ERROR: {e}"
+
+
+class CSVAdapter(ProcessingPipeline):
+
+    def process(self, data: Any) -> Union[str, Any]:
+        try:
+            print(f"[CSV Pipeline {self.pipeline_id}] Starting...")
+            result = self.run(data)
+            return f"CSV Output: {result}"
+        except Exception as e:
+            return f"CSV ERROR: {e}"
+
+
+class StreamAdapter(ProcessingPipeline):
+
+    def process(self, data: Any) -> Union[str, Any]:
+        try:
+            print(f"[STREAM Pipeline {self.pipeline_id}] Starting...")
+            result = self.run(data)
+            return f"Stream Output: {result}"
+        except Exception as e:
+            return f"Stream ERROR: {e}"
+
+
+# ===================== MANAGER =====================
+
+class NexusManager:
+
+    def __init__(self, pipelines: List[ProcessingPipeline]):
+        self.pipelines = pipelines
+
+    def execute(self, data: Any) -> None:
+        print("=== NEXUS MANAGER START ===")
+        for pipeline in self.pipelines:
+            result = pipeline.process(data)
+            print(result)
+        print("=== ALL PIPELINES EXECUTED ===")
+
+
+# ===================== MAIN =====================
+
+if __name__ == "__main__":
+
+    # Create pipelines
+    json_pipeline = JSONAdapter("P1")
+    csv_pipeline = CSVAdapter("P2")
+    stream_pipeline = StreamAdapter("P3")
+
+    # Add stages
+    for pipeline in [json_pipeline, csv_pipeline, stream_pipeline]:
+        pipeline.add_stage(InputStage())
+        pipeline.add_stage(TransformStage())
+        pipeline.add_stage(OutputStage())
+
+    # Create manager
+    manager = NexusManager([json_pipeline, csv_pipeline, stream_pipeline])
+
+    # Execute
+    manager.execute("hello code nexus")
