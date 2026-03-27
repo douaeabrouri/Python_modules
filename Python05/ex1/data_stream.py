@@ -91,49 +91,43 @@ if __name__ == "__main__":
     print("Initializing Sensor Stream...")
     sensor = SensorStream("SENSOR_001")
     print("Stream ID: SENSOR_001, Type: Environmental Data")
-
     sensor_data = ["temp:22.5", "humidity:65", "pressure:1013"]
     print(f"Processing sensor batch: {sensor_data}")
-    sensor.process_batch(sensor_data)
-
+    string: str = sensor.process_batch(sensor_data)
+    print(f"{string}\n")
     # Transaction Stream
     print("Initializing Transaction Stream...")
     transaction = TransactionStream("TRANS_001")
     print("Stream ID: TRANS_001, Type: Financial Data")
-
     transaction_data = ["buy:100", "sell:150", "buy:75"]
     print(f"Processing transaction batch: {transaction_data}")
-    transaction.process_batch(transaction_data)
-
+    string2: str = transaction.process_batch(transaction_data)
+    print(f"{string2}\n")
     # Event Stream
     print("Initializing Event Stream...")
     event = EventStream("EVENT_001")
     print("Stream ID: EVENT_001, Type: System Events")
-
     event_data = ["login", "error", "logout"]
     print(f"Processing event batch: {event_data}")
-    event.process_batch(event_data)
-
+    string3: str = event.process_batch(event_data)
+    print(f"{string3}\n")
     # Polymorphic processing
     print("=== Polymorphic Stream Processing ===")
-    print("Processing mixed stream types through unified interface...")
-
+    print("Processing mixed stream types through unified interface...\n")
     streams = [sensor, transaction, event]
-
     batch_data = [
         ["temp:30", "temp:35"],
         ["buy:200", "sell:50", "buy:300", "sell:100"],
         ["login", "error", "logout"]
     ]
-
     print("Batch 1 Results:")
 
     for stream, data in zip(streams, batch_data):
         result = stream.process_batch(data)
         if result:
             print(f"- {result}")
-
+    print()
     print("Stream filtering active: High-priority data only")
-    print("Filtered results: 2 critical sensor alerts, 1 large transaction")
+    print("Filtered results: 2 critical sensor alerts, 1 large transaction\n")
     print("All streams processed successfully. Nexus throughput optimal.")
     
