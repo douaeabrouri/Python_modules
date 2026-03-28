@@ -7,24 +7,23 @@ class DataProcessor(ABC):
     @abstractmethod
     def process(self, data: Any) -> str:
         pass
-
     @abstractmethod
     def validate(self, data: Any) -> bool:
         pass
-
     def format_output(self, result: str) -> str:
         return f"Output: {result}"
 
-
 class NumericProcessor(DataProcessor):
     """Check if data is a list of numbers"""
-
     def validate(self, data: Any) -> bool:
+<<<<<<< HEAD
         return isinstance(data, list) and\
                all(isinstance(i, (int, float)) for i in data)
 
+=======
+        return isinstance(data, list) and all(isinstance(i, (int, float)) for i in data)
+>>>>>>> ff657f4 (...)
     """Process numeric da ta - calculate sum and average"""
-
     def process(self, data: Any) -> str:
         try:
             if isinstance(data, list) is True:
@@ -36,15 +35,11 @@ class NumericProcessor(DataProcessor):
         except Exception as e:
             return f"ERROR: processing numeric data: {str(e)}"
 
-
 class TextProcessor(DataProcessor):
     """Check if data is a string"""
-
     def validate(self, data: Any) -> bool:
         return isinstance(data, str)
-
     """Process text data - count characters and words"""
-
     def process(self, data: Any) -> str:
         try:
             if isinstance(data, str) is True:
@@ -56,13 +51,10 @@ class TextProcessor(DataProcessor):
         except Exception as e:
             return f"ERROR: processing text data: {str(e)}"
 
-
 class LogProcessor(DataProcessor):
     """Check if data is a string that looks like a log entry"""
-
     def validate(self, data: Any) -> bool:
         return isinstance(data, str) and ": " in data
-
     def process(self, data: Any) -> str:
         liste: list = data.split(":", 1)
         level: str = liste[0]
@@ -77,10 +69,8 @@ class LogProcessor(DataProcessor):
 
 if __name__ == "__main__":
     print("=== CODE NEXUS - DATA PROCESSOR FOUNDATION ===\n")
-
     print("Initializing Numeric Processor...")
     num_processor = NumericProcessor()
-
     print("Processing data: [1, 2, 3, 4, 5]")
     numeric_data: list = [1, 2, 3, 4, 5]
     if num_processor.validate(numeric_data):
