@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from abc import ABC, abstractmethod
-from typing import Protocol, Any, List
+from typing import Protocol, Any, List, Union
 
 
 class ProcessingStage(Protocol):
@@ -74,12 +74,13 @@ class JSONAdapter(ProcessingPipeline):
         super().__init__()
         self.pipline_id = pipline_id
 
-    def process(self, data: Any) -> Any:
+    def process(self, data: Any) -> Union[str, Any]:
         print("Processing JSON data through pipeline...")
         result: Any = data
         for stage in self.stages:
             result = stage.process(result)
         print(result)
+        return result
 
 
 class CSVAdapter(ProcessingPipeline):
@@ -87,26 +88,26 @@ class CSVAdapter(ProcessingPipeline):
         super().__init__()
         self.pipline_id = pipline_id
 
-    def process(self, data: Any) -> Any:
+    def process(self, data: Any) -> Union[str, Any]:
         print("Processing CSV data through same pipeline...")
         result: Any = data
         for stage in self.stages:
             result = stage.process(result)
         print(result)
-
+        return result
 
 class StreamAdapter(ProcessingPipeline):
     def __init__(self, pipline_id: str) -> None:
         super().__init__()
         self.pipline_id = pipline_id
 
-    def process(self, data: Any) -> Any:
+    def process(self, data: Any) -> Union[str, Any]:
         print("Processing Stream data through same ipeline...")
         result: Any = data
         for stage in self.stages:
             result = stage.process(result)
         print(result)
-
+        return result
 
 class NexusManager:
     def __init__(self) -> None:
