@@ -5,8 +5,8 @@ from typing import Protocol, Any, List
 
 
 class ProcessingStage(Protocol):
-    def process(self, data: Any) -> Any: 
-        ...
+    def process(self, data: Any) -> Any: ...
+
 
 class ProcessingPipeline(ABC):
     def __init__(self):
@@ -54,13 +54,19 @@ class TransformStage:
 class OutputStage:
     def process(self, data: Any) -> str:
         if data.get("type") == "JSON":
-            return f"Output: Processed temperature reading: {data.get('input').get('value')}°{data.get('input').get('unit')} (Normal range)"
+            return f"Output: Processed temperature reading:"\
+                   f" {data.get('input').get('value')}°"\
+                   f"{data.get('input').get('unit')}"\
+                   f" (Normal range)"
         elif data.get("type") == "CSV":
-            return f"Output: User activity logged: {len(data) - 1} actions processed"
+            return f"Output: User activity logged: "\
+                   f"{len(data) - 1} actions processed"
         elif data.get("type") == "Stream":
-            return f"Output: Stream summary: 5 readings, avg: 22.1°C"
+            values: int = data.get("input")
+            avg = round(sum(values) / len(values), 1) if values else 0
+            return f"Output: Stream summary: {len(values)} readings, avg: {avg}°C"
         else:
-            raise TypeError("Error!")
+            raise TypeError("TypeError!")
 
 
 class JSONAdapter(ProcessingPipeline):
@@ -82,7 +88,7 @@ class CSVAdapter(ProcessingPipeline):
         self.pipline_id = pipline_id
 
     def process(self, data: Any) -> Any:
-        print("Processing CSV data through pipeline...")
+        print("Processing CSV data through same pipeline...")
         result: Any = data
         for stage in self.stages:
             result = stage.process(result)
@@ -95,7 +101,7 @@ class StreamAdapter(ProcessingPipeline):
         self.pipline_id = pipline_id
 
     def process(self, data: Any) -> Any:
-        print("Processing Stream data through pipeline...")
+        print("Processing Stream data through same ipeline...")
         result: Any = data
         for stage in self.stages:
             result = stage.process(result)
@@ -118,19 +124,19 @@ class NexusManager:
                     pipe.process(d)
 
 
-def parse_json_string(json_string) -> dict:
+def parse_json_string(json_string: str) -> dict:
     if not isinstance(json_string, str):
         raise ValueError("Input must be a string")
     s: str = json_string
     n: int = len(s)
 
-    def skip_ws(i):
+    def skip_ws(i: int) -> int:
         while i < n and s[i] in " \t\n\r":
             i += 1
         return i
 
-    def parse_value(i):
-        i = skip_ws(i)
+    def parse_value(i: int) -> tuple:
+        i: int = skip_ws(i)
         if i >= n:
             raise ValueError("Unexpected end of JSON")
         c = s[i]
@@ -151,7 +157,7 @@ def parse_json_string(json_string) -> dict:
         else:
             raise ValueError(f"Invalid JSON value at position {i}")
 
-    def parse_string(i):
+    def parse_string(i: int) -> tuple:
         if s[i] != '"':
             raise ValueError(f"Expected '\"' at position {i}")
         i += 1
@@ -189,8 +195,8 @@ def parse_json_string(json_string) -> dict:
                 i += 1
         raise ValueError("Unterminated string")
 
-    def parse_number(i):
-        start = i
+    def parse_number(i: int) -> tuple:
+        start: int = i
         if s[i] == "-":
             i += 1
         while i < n and s[i].isdigit():
@@ -216,7 +222,7 @@ def parse_json_string(json_string) -> dict:
             else int(num_str)
         ), i
 
-    def parse_array(i):
+    def parse_array(i: int) -> tuple:
         if s[i] != "[":
             raise ValueError(f"Expected '[' at position {i}")
         i += 1
@@ -237,7 +243,7 @@ def parse_json_string(json_string) -> dict:
                 raise ValueError(f"Expected ',' or ']' at position {i}")
         raise ValueError("Unterminated array")
 
-    def parse_object(i):
+    def parse_object(i: int) -> tuple:
         if s[i] != "{":
             raise ValueError(f"Expected '{{' at position {i}")
         i += 1
@@ -271,7 +277,7 @@ def parse_json_string(json_string) -> dict:
     return result
 
 
-def parse_csv_string(data) -> dict:
+def parse_csv_string(data: str) -> list:
     if not isinstance(data, str):
         print("Error: CSV data must be a string")
         return []
@@ -294,26 +300,27 @@ def parse_csv_string(data) -> dict:
     return result
 
 
-def parse_stream_string(data: Any) -> str:
-    """
-    Converts any input data to a string for the StreamAdapter.
-    Handles:
-    - Strings: returned as-is
-    - Lists or tuples: joined into a string with commas
-    - Dictionaries: converted to key=value pairs
-    - Other types: converted using str()
-    """
+def parse_stream_string(data: Any) -> list:
     if isinstance(data, str):
-        return data
-    elif isinstance(data, (list, tuple)):
-        # Join each element as a string
-        return ", ".join(str(item) for item in data)
-    elif isinstance(data, dict):
-        # Convert dict to key=value, comma separated
-        return ", ".join(f"{k}={v}" for k, v in data.items())
+        # "temp:22.5, temp:23.1, temp:20.7"
+        items = data.split(",")
+        values = []
+        for item in items:
+            try:
+                values.append(float(item.split(":")[1].strip()))
+            except Exception:
+                pass
+        return values
+    elif isinstance(data, list):
+        values = []
+        for item in data:
+            try:
+                values.append(float(str(item).split(":")[1].strip()))
+            except Exception:
+                pass
+        return values
     else:
-        # Fallback for any other type
-        return str(data)
+        return []
 
 
 if __name__ == "__main__":
@@ -350,7 +357,10 @@ if __name__ == "__main__":
         "input": '{"sensor": "temp", "value": 23.5, "unit": "C"}',
     }
     data_dict_csv: dict = {"type": "CSV", "input": "user,action,timestamp"}
-    data_dict_stream: dict = {"type": "Stream", "input": "Real-time sensor stream"}
+    data_dict_stream: dict = {
+        "type": "Stream", 
+        "input": "temp:22.5, temp:21.3, temp:23.1, temp:20.9, temp:22.7"  # ✅ real values!
+    }
     data = [data_dict_json, data_dict_csv, data_dict_stream]
     manager.process_data(data)
 

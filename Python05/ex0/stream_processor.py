@@ -20,17 +20,19 @@ class NumericProcessor(DataProcessor):
     """Check if data is a list of numbers"""
 
     def validate(self, data: Any) -> bool:
-        return isinstance(data, list) and all(isinstance(i, (int, float)) for i in data)
+        return isinstance(data, list) and\
+               all(isinstance(i, (int, float)) for i in data)
 
     """Process numeric da ta - calculate sum and average"""
 
     def process(self, data: Any) -> str:
         try:
-            if isinstance(data, list) == True:
+            if isinstance(data, list) is True:
                 lenght: int = len(data)
                 somme: int = sum(data)
                 avg: float = somme / lenght
-                return f"Processed {lenght} numeric values, sum={somme}, avg={avg}"
+                return f"Processed {lenght} numeric values, "\
+                       f"sum={somme}, avg={avg}"
         except Exception as e:
             return f"ERROR: processing numeric data: {str(e)}"
 
@@ -45,10 +47,11 @@ class TextProcessor(DataProcessor):
 
     def process(self, data: Any) -> str:
         try:
-            if isinstance(data, str) == True:
+            if isinstance(data, str) is True:
                 len_char: int = len(data)
                 len_words: int = len(data.split())
-                return f"Processed text: {len_char} characters, {len_words} words"
+                return f"Processed text: {len_char} "\
+                       f"characters, {len_words} words"
 
         except Exception as e:
             return f"ERROR: processing text data: {str(e)}"
