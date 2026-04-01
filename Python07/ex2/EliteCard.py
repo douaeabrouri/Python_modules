@@ -21,5 +21,13 @@ class EliteCard(Card, Combatable, Magical):
         return {
             'attacker': self.name,
             'target': target.name,
-            'damege': 
+            'damege': self.attack,
+            'combat_type': "melee"
+        }
+    def defend(self, incoming_damage: int) -> dict:
+        return {
+            'defender': self.name,
+            'damage_taken': incoming_damage,
+            'damage_blocked': self.health // 2,
+            'stile_alive': incoming_damage - self.health
         }
