@@ -6,7 +6,7 @@ class SpellCard(Card):
         self.used = False
         self.effect_type = effect_type
 
-    def play(self, game_state: dict) -> dict:
+    def play(self) -> dict:
         self.used = True
         return {
             "card_played": self.name,
@@ -23,7 +23,7 @@ class SpellCard(Card):
 		}
     
     def get_card_info(self) -> None:
-        info: dict = super().__init__()
+        info = super().get_card_info()
         info['type'] = "spell"
         info['effect_type'] = self.effect_type
         return info

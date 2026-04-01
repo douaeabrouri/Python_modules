@@ -20,7 +20,7 @@ class Deck:
         random.shuffle(self.cards)
     def draw_card(self) -> Card:
         if not self.cards:
-            return None:
+            return None
         return self.cards.pop(0)
     def get_deck_stats(self) -> dict:
         total: int = len(self.cards)
@@ -40,5 +40,5 @@ class Deck:
             'creatures': creature_count,
             'spells': spell_count,
             'artifacts': artifact_count,
-            'avg_cost': avg_cost
+            'avg_cost': round(avg_cost, 1)
         }
