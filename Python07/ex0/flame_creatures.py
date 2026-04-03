@@ -1,0 +1,14 @@
+from ex0.creature import Creature
+
+class Flameling(Creature):
+    def __init__(self) -> None:
+        super().__init__("Flaming", "fire")
+    
+    def attack(self) -> str:
+        return "Flaming uses Ember!"
+class Pyrodon(Creature):
+    def __init__(self) -> None:
+        super().__init__("Pyrodon", "Fire/Flying")
+
+    def attack(self) -> str:
+        return "Pyrodon uses Flamethrower!"
