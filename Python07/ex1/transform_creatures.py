@@ -1,11 +1,11 @@
-from battle import Creature
-from capabilities import TransformCapability
+from ex0.creature import Creature
+from ex1.capabilities import TransformCapability
 
 
 class Shiftling(Creature, TransformCapability): 
     def __init__(self) -> None:
-        self.name = "Shiftling"
-        self.type = "Normal"
+        Creature.__init__(self, "Shiftling", "Normal")
+        TransformCapability.__init__(self) 
     def attack(self) -> str:
         if self.is_transformed:
             return "Shiftling performs a boosted strike!"
@@ -21,8 +21,8 @@ class Shiftling(Creature, TransformCapability):
 
 class Morphagon(Creature, TransformCapability):
     def __init__(self) -> None:
-       self.name = "Morphagon"
-       self.type = "Normal/Dragon"
+       Creature.__init__(self, "Morphagon", "Normal/Dragon")
+       TransformCapability.__init__(self)
     
     def attack(self) -> str:
         if self.is_transformed:

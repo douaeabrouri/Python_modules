@@ -23,10 +23,10 @@ def test_transform(factory):
     base = factory.create_base()
     print(" base:")
     print(base.describe())
-    print(base.attack())        # normal attack
-    print(base.transform())     # transform
-    print(base.attack())        # boosted attack
-    print(base.revert())        # revert
+    print(base.attack())
+    print(base.transform())
+    print(base.attack())
+    print(base.revert())
     
     evolved = factory.create_evolved()
     print(" evolved:")

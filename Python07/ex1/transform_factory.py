@@ -1,4 +1,5 @@
-from ex0 import CreatureFactory  # import from ex0
+from ex0.creature_factory import CreatureFactory
+from ex0.creature import Creature
 from .transform_creatures import Shiftling, Morphagon
 
 class TransformCreatureFactory(CreatureFactory):

@@ -1,5 +1,5 @@
 from ex1.capabilities import HealCapability
-from battle import Creature
+from ex0.creature import Creature
 
 class Spourtling(Creature, HealCapability):
 	def __init__(self) -> None:
@@ -8,7 +8,7 @@ class Spourtling(Creature, HealCapability):
 	def attack(self) -> str:
 		return "Sproutling uses Vine Whip!"
 
-	def heal() -> str:
+	def heal(self) -> str:
 		return "Sproutling heals itself for a small amount"
 
 class Bloomelle(Creature, HealCapability):
