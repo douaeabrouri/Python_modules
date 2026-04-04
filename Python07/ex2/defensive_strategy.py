@@ -13,5 +13,6 @@ class DefensiveStrategy(BattleStrategy):
                 f"Invalid Creature '{creature.name}' "
                 f"for this defensive strategy"
             )
+        assert isinstance(creature, HealCapability)
         print(creature.attack())
         print(creature.heal())

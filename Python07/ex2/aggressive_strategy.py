@@ -12,6 +12,7 @@ class AggressiveStrategy:
                 f"Invalid Creature '{creature.name}' "
                 f"for this aggressive strategy"
             )
+        assert isinstance(creature, TransformCapability)
         print(creature.transform())
         print(creature.attack())
         print(creature.revert())
