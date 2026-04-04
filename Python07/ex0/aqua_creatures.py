@@ -1,4 +1,5 @@
-from ex0.creature import Creature
+from .creature import Creature
+
 
 class Aquabub(Creature):
     def __init__(self) -> None:
@@ -6,10 +7,11 @@ class Aquabub(Creature):
 
     def attack(self) -> str:
         return "Aquabub uses Water Gun!"
+
+
 class Torragon(Creature):
     def __init__(self) -> None:
         super().__init__("Torragon", "Water")
 
     def attack(self) -> str:
         return "Torragon uses Hydro Pump!"
-    

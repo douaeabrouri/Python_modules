@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 from ex1 import HealingCreatureFactory, TransformCreatureFactory
 
+
 def test_healing(factory):
     print("Testing Creature with healing capability")
-    
+
     base = factory.create_base()
     print(" base:")
     print(base.describe())
     print(base.attack())
     print(base.heal())
-    
+
     evolved = factory.create_evolved()
     print(" evolved:")
     print(evolved.describe())
@@ -18,8 +19,8 @@ def test_healing(factory):
 
 
 def test_transform(factory):
-    print("Testing Creature with transform capability")
-    
+    print("\nTesting Creature with transform capability")
+
     base = factory.create_base()
     print(" base:")
     print(base.describe())
@@ -27,7 +28,7 @@ def test_transform(factory):
     print(base.transform())
     print(base.attack())
     print(base.revert())
-    
+
     evolved = factory.create_evolved()
     print(" evolved:")
     print(evolved.describe())
