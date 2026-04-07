@@ -2,7 +2,6 @@
 import os
 import sys
 from dotenv import load_dotenv
-
 from typing import Optional
 
 def load_config() -> dict:
