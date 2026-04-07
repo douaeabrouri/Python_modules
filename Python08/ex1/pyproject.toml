@@ -1,0 +1,18 @@
+[project]
+name = "ex1"
+version = "1.0.0"
+description = ""
+authors = [
+    {name = "douaeabrouri",email = "abrouridoae@gmail.com"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+pandas = "^2.1.0"
+numpy = "^2.0.0"
+requests = "^2.31.0"
+matplotlib = "^3.7.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
