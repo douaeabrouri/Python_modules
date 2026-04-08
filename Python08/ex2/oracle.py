@@ -3,39 +3,45 @@ import os
 import sys
 from typing import Optional
 
-RED     = "\033[91m"
-RESET   = "\033[0m"
-GREEN   = "\033[92m"
+RED = "\033[91m"
+RESET = "\033[0m"
+GREEN = "\033[92m"
+
+
 def load_config() -> dict:
     try:
-       from dotenv import load_dotenv
-    except ModuleNotFoundError as e:
+        from dotenv import load_dotenv
+    except ModuleNotFoundError:
         print(f"{RED}[ERROR] python-dotenv is not installed!{RESET}")
         print("Install it with: pip install python-dotenv")
         sys.exit(1)
     load_dotenv()
-    
+
     matrix_mode: Optional[str] = os.environ.get("MATRIX_MODE")
     database_url: Optional[str] = os.environ.get("DATABASE_URL")
     api_key: Optional[str] = os.environ.get("API_KEY")
     log_level: Optional[str] = os.environ.get("LOG_LEVEL")
     zion_endpoint: Optional[str] = os.environ.get("ZION_ENDPOINT")
-    
+
     return {
         "MATRIX_MODE": matrix_mode,
         "DATABASE_URL": database_url,
         "API_KEY": api_key,
         "LOG_LEVEL": log_level,
-        "ZION_ENDPOINT": zion_endpoint
+        "ZION_ENDPOINT": zion_endpoint,
     }
+
 
 def display_config(config: dict) -> None:
     print("\nConfiguration loaded:")
     print(f"Mode: {config['MATRIX_MODE']}")
     print(f"Database: Connected to {config['DATABASE_URL']}")
-    print(f"API Access: {'Authenticated' if config['API_KEY'] else 'Not authenticated'}")
+    status: bool = bool(config['API_KEY'])
+    print(f"API Access: {status}")
     print(f"Log Level: {config['LOG_LEVEL']}")
-    print(f"Zion Network: {'Online' if config['ZION_ENDPOINT'] else 'Offline'}")
+    print(f"Zion Network: "
+          f"{'Online' if config['ZION_ENDPOINT'] else 'Offline'}")
+
 
 def security_check(config: dict) -> None:
     print("\nEnvironment security check:")
@@ -48,12 +54,12 @@ def security_check(config: dict) -> None:
         print(f"{GREEN}[OK] .env file properly configured{RESET}")
     else:
         print(f"{RED}[WARNING] Some variables are missing in .env!{RESET}")
-    
+
     if config["MATRIX_MODE"] is not None:
         print(f"{GREEN}[OK] Production overrides available{RESET}")
     else:
         print(f"{RED}[WARNING] MATRIX_MODE not set!{RESET}")
-        
+
 
 if __name__ == "__main__":
     print("\nORACLE STATUS: Reading the Matrix...\n")
