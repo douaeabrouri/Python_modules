@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 import importlib
 import sys
+from typing import Dict
 
 GREEN = "\033[92m"
 RESET = "\033[0m"
 RED = "\033[91m"
 
-packages: dict = {
+packages: Dict[str, str] = {
     "pandas": "Data manipulation ready",
     "numpy": "Numerical computation ready",
     "requests": " Network access ready",
@@ -14,10 +15,10 @@ packages: dict = {
 }
 
 
-def check_dependencies(package: dict) -> bool:
+def check_dependencies(packages: dict) -> bool:
     print("Checking dependencies:")
     done: bool = True
-    for package, description in package.items():
+    for package, description in packages.items():
         try:
             mod = importlib.import_module(package)
             version: str = mod.__version__

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 import os
 import sys
-from typing import Optional
+from typing import Optional, Dict
 
 RED = "\033[91m"
 RESET = "\033[0m"
 GREEN = "\033[92m"
 
 
-def load_config() -> dict:
+def load_config() -> Dict:
     try:
         from dotenv import load_dotenv
     except ModuleNotFoundError:
