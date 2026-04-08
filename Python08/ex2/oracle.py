@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 import os
 import sys
-from dotenv import load_dotenv
 from typing import Optional
 
+RED     = "\033[91m"
+RESET   = "\033[0m"
+GREEN   = "\033[92m"
 def load_config() -> dict:
+    try:
+       from dotenv import load_dotenv
+    except ModuleNotFoundError as e:
+        print(f"{RED}[ERROR] python-dotenv is not installed!{RESET}")
+        print("Install it with: pip install python-dotenv")
+        sys.exit(1)
     load_dotenv()
     
     matrix_mode: Optional[str] = os.environ.get("MATRIX_MODE")
@@ -30,9 +38,6 @@ def display_config(config: dict) -> None:
     print(f"Zion Network: {'Online' if config['ZION_ENDPOINT'] else 'Offline'}")
 
 def security_check(config: dict) -> None:
-    RED     = "\033[91m"
-    GREEN   = "\033[92m"
-    RESET   = "\033[0m"
     print("\nEnvironment security check:")
     if config["API_KEY"] is not None:
         print(f"{GREEN}[OK] No hardcoded secrets detected{RESET}")
