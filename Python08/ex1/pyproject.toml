@@ -1,15 +1,13 @@
-[project]
+[tool.poetry]
 name = "ex1"
 version = "1.0.0"
-description = ""
-authors = [
-    {name = "douaeabrouri",email = "abrouridoae@gmail.com"}
-]
+description = "Matrix data analysis tool"
+authors = ["douaeabrouri <abrouridoae@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10"
 pandas = "^2.1.0"
-numpy = "^2.0.0"
+numpy = "^1.25.0"
 requests = "^2.31.0"
 matplotlib = "^3.7.2"
 
