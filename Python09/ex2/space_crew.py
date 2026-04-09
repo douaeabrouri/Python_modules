@@ -105,17 +105,17 @@ if __name__ == "__main__":
     )
 
     print("Valid mission created:")
-    print(f"Mission: {mission.mission_name}")
-    print(f"ID: {mission.mission_id}")
-    print(f"Destination: {mission.destination}")
-    print(f"Duration: {mission.duration_days} days")
-    print(f"Budget: ${mission.budget_millions}M")
-    print(f"Crew size: {len(mission.crew)}")
-    print("Crew members:")
+    print(f"{YELLOW}Mission{RESET}: {mission.mission_name}")
+    print(f"{YELLOW}ID{RESET}: {mission.mission_id}")
+    print(f"{YELLOW}Destination{RESET}: {mission.destination}")
+    print(f"{YELLOW}Duration{RESET}: {mission.duration_days} days")
+    print(f"{YELLOW}Budget{RESET}: ${mission.budget_millions}M")
+    print(f"{YELLOW}Crew size{RESET}: {len(mission.crew)}")
+    print(f"{YELLOW}Crew members:{RESET}")
     for member in mission.crew:
         print(f"  - {member.name} ({member.rank.value}) "
               f"- {member.specialization}")
-
+    print("\n=========================================")
     try:
         cadet1 = CrewMember(
             member_id="CD001",

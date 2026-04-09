@@ -20,10 +20,9 @@ if __name__ == "__main__":
     RESET = "\033[0m"
     YELLOW = "\033[33m"
     RED = "\033[31m"
-
     station = SpaceStation(
         station_id="ISS001",
-        name="Broke Station",
+        name="International Space Station",
         crew_size=6,
         power_level=85.5,
         oxygen_level=92.3,
@@ -34,6 +33,7 @@ if __name__ == "__main__":
 
     print("Space Station Data Validation")
     print("========================================")
+    print("Valid station created:")
     print(f"{YELLOW}ID{RESET}: {station.station_id}")
     print(f"{YELLOW}Name{RESET}: {station.name}")
     print(f"{YELLOW}Crew{RESET}: {station.crew_size} people")
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     try:
         bad_station = SpaceStation(
             station_id="ISS001",
-            name="International Space Station",
+            name="Broke Station",
             crew_size=70,
             power_level=85.5,
             oxygen_level=92.3,
