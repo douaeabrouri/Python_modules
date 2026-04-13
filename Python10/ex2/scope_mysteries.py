@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from collections.abc import Callable
-
+from typing import Any
 
 def mage_counter() -> Callable:
     count: int = 0
@@ -32,12 +32,12 @@ def enchantment_factory(enchantment_type: str) -> Callable:
 
 
 def memory_vault() -> dict[str, Callable]:
-    memory: dict[str, Callable] = {}
+    memory: dict[str, Any] = {}
 
     def store(key: str, value: int) -> None:
         memory[key] = value
 
-    def recall(key: str) -> str:
+    def recall(key: str) -> Any:
         if key in memory:
             return memory[key]
         else:
@@ -63,15 +63,15 @@ if __name__ == "__main__":
     print(f"\n{PURPLE}Testing enchantment factory...{RESET}")
     first_word: str = "1337"
     secand_word: str = "The"
-    obj = enchantment_factory(first_word)
-    print(obj("med"))
+    enchantment = enchantment_factory(first_word)
+    print(enchantment("med"))
     obj = enchantment_factory(secand_word)
     print(obj("best"))
     print(f"\n{PURPLE}Testing memory vault...{RESET}")
     print("Store 'secret' = 42")
-    obj: dict[str, any] = memory_vault()
-    obj["store"]("secret", 42)
-    result = obj["recall"]("secret")
-    unknow = obj["recall"]("unknow")
+    vault: dict[str, Any] = memory_vault()
+    vault["store"]("secret", 42)
+    result = vault["recall"]("secret")
+    unknow = vault["recall"]("unknow")
     print(f"Recall 'secret': {result}")
     print(f"Recall 'unknown': {unknow}")

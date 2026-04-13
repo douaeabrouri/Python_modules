@@ -7,13 +7,12 @@ import time
 RESET: str = "\033[0m"
 RED: str = "\033[31m"
 PURPLE: str = "\033[38;2;229;208;255m"
-RESET: str = "\033[0m"
 GREEN = "\033[92m"
 
 
 def spell_timer(func: Callable) -> Callable:
     @wraps(func)
-    def wrapper(*args: any, **kwargs: any) -> str:
+    def wrapper(*args: Any, **kwargs: Any) -> str:
         print(f"Casting {func.__name__}...")
         start = time.time()
         result = func(*args, **kwargs)
@@ -27,7 +26,7 @@ def spell_timer(func: Callable) -> Callable:
 def power_validator(min_power: int) -> Callable:
     def decorator(func: Callable) -> Callable:
         @wraps(func)
-        def wrapper(self: Any, *args: any, **kwargs: any) -> Any:
+        def wrapper(self: Any, *args: Any, **kwargs: Any) -> Any:
             power = args[0]
             if power >= min_power:
                 return func(self, *args, **kwargs)
@@ -42,7 +41,7 @@ def power_validator(min_power: int) -> Callable:
 def retry_spell(max_attempts: int) -> Callable:
     def decorator(func: Callable) -> Callable:
         @wraps(func)
-        def wrapper(*args: any, **kwargs: any) -> Any:
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             for attempt in range(1, max_attempts + 1):
                 try:
                     return func(*args, **kwargs)
@@ -51,9 +50,10 @@ def retry_spell(max_attempts: int) -> Callable:
                         f"{RED}Spell failed, retrying... "
                         f"(attempt {attempt}/{max_attempts}){RESET}"
                     )
-            return f"{GREEN}Spell casting failed after"
-            f" {max_attempts} attempts{RESET}"
-
+            return (
+                f"{GREEN}Spell casting failed after"
+                f" {max_attempts} attempts{RESET}"
+			)
         return wrapper
 
     return decorator
