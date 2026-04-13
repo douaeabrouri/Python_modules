@@ -50,6 +50,6 @@ if __name__ == "__main__":
         {'power': 60, 'name': "dragon"},
         {'power': 76, 'name': "darwin"},
         {'power': 17, 'name': "hanbol"},
-	]
+    ]
     dict_test: dict = mage_stats(list_test)
     print(dict_test)
