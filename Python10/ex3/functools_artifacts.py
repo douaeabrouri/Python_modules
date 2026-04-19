@@ -72,11 +72,11 @@ if __name__ == "__main__":
     print(f"\n{PURPLE}Testing spell reducer...{RESET}")
     liste: list[int] = [2, 4, 7, 8]
     print(f"sum: {spell_reducer(liste, 'add')}")
-    print(f"prouct: {spell_reducer(liste, 'multiply')}")
+    print(f"product: {spell_reducer(liste, 'multiply')}")
     try:
         print(f"max: {spell_reducer(liste, 'maxx')}")
     except ValueError as e:
-        print(f"{RED}Error cuaght: {e}{RESET}")
+        print(f"{RED}Error caught: {e}{RESET}")
     print(f"\n{PURPLE}Testing partial enchante...{RESET}")
 
     def base_enchantment(power: int, element: str, target: str) -> str:

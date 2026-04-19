@@ -4,11 +4,6 @@ from functools import wraps
 from typing import Any
 import time
 
-RESET: str = "\033[0m"
-RED: str = "\033[31m"
-PURPLE: str = "\033[38;2;229;208;255m"
-GREEN = "\033[92m"
-
 
 def spell_timer(func: Callable) -> Callable:
     @wraps(func)
@@ -26,10 +21,10 @@ def spell_timer(func: Callable) -> Callable:
 def power_validator(min_power: int) -> Callable:
     def decorator(func: Callable) -> Callable:
         @wraps(func)
-        def wrapper(self: Any, *args: Any, **kwargs: Any) -> Any:
-            power = args[0]
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
+            power = args[-1]
             if power >= min_power:
-                return func(self, *args, **kwargs)
+                return func(*args, **kwargs)
             else:
                 return "Insufficient power for this spell"
 
@@ -39,6 +34,10 @@ def power_validator(min_power: int) -> Callable:
 
 
 def retry_spell(max_attempts: int) -> Callable:
+    RESET: str = "\033[0m"
+    RED: str = "\033[31m"
+    GREEN = "\033[92m"
+
     def decorator(func: Callable) -> Callable:
         @wraps(func)
         def wrapper(*args: Any, **kwargs: Any) -> Any:
@@ -53,7 +52,7 @@ def retry_spell(max_attempts: int) -> Callable:
             return (
                 f"{GREEN}Spell casting failed after"
                 f" {max_attempts} attempts{RESET}"
-			)
+            )
         return wrapper
 
     return decorator
@@ -67,13 +66,20 @@ class MageGuild:
             return False
         return name.replace(" ", "").isalpha()
 
+    GREEN = "\033[92m"
+    RESET: str = "\033[0m"
+
     @power_validator(10)
-    def cast_spell(self: Any, power: int, spell_name: str) -> str:
+    def cast_spell(self: Any, spell_name: str, power: int) -> str:
         return f"{GREEN}Successfully cast "
         f"{spell_name} with {power} power{RESET}"
 
 
 if __name__ == "__main__":
+    RESET: str = "\033[0m"
+    RED: str = "\033[31m"
+    PURPLE: str = "\033[38;2;229;208;255m"
+    GREEN = "\033[92m"
 
     @spell_timer
     def firball() -> str:
@@ -96,5 +102,12 @@ if __name__ == "__main__":
     obj = MageGuild()
     print(MageGuild.validate_mage_name("Alix"))
     print(MageGuild.validate_mage_name("Al"))
-    print(obj.cast_spell(15, "Lightning"))
-    print(obj.cast_spell(5, "Lightning"))
+    print(obj.cast_spell("Lightning", 15))
+    print(obj.cast_spell("Lightning", 5))
+    print(f"\n{PURPLE}Testing Power validator...{RESET}")
+
+    @power_validator(10)
+    def valid(power: int) -> str:
+        return "its valid"
+    print(valid(17))
+    print(valid(5))

@@ -2,6 +2,7 @@
 from collections.abc import Callable
 from typing import Any
 
+
 def mage_counter() -> Callable:
     count: int = 0
 
